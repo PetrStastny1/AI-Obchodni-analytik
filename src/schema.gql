@@ -1,0 +1,15 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Sale {
+  id: Int!
+  date: String!
+  product: String!
+  quantity: Int!
+  price: Float!
+}
+
+type Query {
+  sales: [Sale!]!
+}
