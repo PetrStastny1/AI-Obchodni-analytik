@@ -24,3 +24,4 @@ export class Sale {
   @Column('decimal', { precision: 10, scale: 2 })
   price: number;
 }
+//
