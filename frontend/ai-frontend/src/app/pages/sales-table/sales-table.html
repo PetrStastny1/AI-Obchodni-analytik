@@ -1,0 +1,43 @@
+<div class="sales-wrapper">
+
+  <h2>Sales</h2>
+
+  <!-- Desktop TABLE -->
+  <table *ngIf="!isMobile()" mat-table [dataSource]="dataSource" class="mat-elevation-z2">
+
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef>Date</th>
+      <td mat-cell *matCellDef="let row">{{ row.date | date }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef>Product</th>
+      <td mat-cell *matCellDef="let row">{{ row.product }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef>Quantity</th>
+      <td mat-cell *matCellDef="let row">{{ row.quantity }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef>Price</th>
+      <td mat-cell *matCellDef="let row">{{ row.price }} Kč</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+  </table>
+
+  <!-- Mobile CARDS -->
+  <div *ngIf="isMobile()" class="mobile-cards">
+    <div class="card" *ngFor="let row of dataSource">
+      <div class="line"><strong>Date:</strong> {{ row.date | date }}</div>
+      <div class="line"><strong>Product:</strong> {{ row.product }}</div>
+      <div class="line"><strong>Quantity:</strong> {{ row.quantity }}</div>
+      <div class="line"><strong>Price:</strong> {{ row.price }} Kč</div>
+    </div>
+  </div>
+
+</div>
