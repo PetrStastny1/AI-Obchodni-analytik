@@ -3,9 +3,11 @@ import { SalesService } from './sales.service';
 import { SalesResolver } from './sales.resolver';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Sale } from './sale.entity';
+import { SalesUploadController } from './upload/sales-upload.controller';
 
 @Module({
   imports: [TypeOrmModule.forFeature([Sale])],
   providers: [SalesService, SalesResolver],
+  controllers: [SalesUploadController],
 })
 export class SalesModule {}

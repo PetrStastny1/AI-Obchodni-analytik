@@ -9,8 +9,8 @@ export class Sale {
   id: number;
 
   @Field()
-  @Column()
-  date: string;
+  @Column({ type: 'datetime' })
+  date: Date;
 
   @Field()
   @Column()

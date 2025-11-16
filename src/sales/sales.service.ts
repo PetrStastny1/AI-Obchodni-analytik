@@ -13,4 +13,14 @@ export class SalesService {
   findAll() {
     return this.repo.find();
   }
+
+  create(data: {
+    date: Date;
+    product: string;
+    quantity: number;
+    price: number;
+  }) {
+    const sale = this.repo.create(data);
+    return this.repo.save(sale);
+  }
 }

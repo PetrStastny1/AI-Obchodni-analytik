@@ -6,8 +6,8 @@ import { Sale } from './sale.entity';
 export class SalesResolver {
   constructor(private readonly salesService: SalesService) {}
 
-  @Query(() => [Sale], { name: 'sales' })
-  async getSales(): Promise<Sale[]> {
+  @Query(() => [Sale])
+  async sales(): Promise<Sale[]> {
     return this.salesService.findAll();
   }
 }
