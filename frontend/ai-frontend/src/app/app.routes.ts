@@ -1,6 +1,10 @@
 import { Routes } from '@angular/router';
-import { SalesTable } from './pages/sales-table/sales-table';
+import { SalesDashboardComponent } from './features/sales-dashboard';
 
 export const routes: Routes = [
-  { path: '', component: SalesTable }
+  { path: 'dashboard', component: SalesDashboardComponent },
+  { path: 'sales', component: SalesDashboardComponent },
+  { path: 'ai', component: SalesDashboardComponent },
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', redirectTo: '/dashboard' }
 ];

@@ -1,39 +1,460 @@
+:root {
+  --bg-gradient: radial-gradient(circle at top left, #e7f3ff 0, #f9f6ff 38%, #ffe7eb 100%);
+  --shell-bg: rgba(255, 255, 255, 0.78);
+  --shell-border: rgba(255, 255, 255, 0.55);
+  --shell-shadow: 0 26px 65px rgba(18, 26, 55, 0.18);
 
-// Include theming for Angular Material with `mat.theme()`.
-// This Sass mixin will define CSS variables that are used for styling Angular Material
-// components according to the Material 3 design spec.
-// Learn more about theming and how to use it for your application's
-// custom components at https://material.angular.dev/guide/theming
-@use '@angular/material' as mat;
+  --sidebar-bg: linear-gradient(180deg, rgba(230, 238, 255, 0.9), rgba(208, 222, 255, 0.92));
+  --sidebar-border: rgba(170, 185, 205, 0.45);
 
-html {
-  @include mat.theme((
-    color: (
-      primary: mat.$azure-palette,
-      tertiary: mat.$blue-palette,
-    ),
-    typography: Roboto,
-    density: 0,
-  ));
+  --panel-bg: rgba(255, 255, 255, 0.9);
+  --panel-border: rgba(190, 200, 215, 0.55);
+  --panel-shadow: 0 22px 38px rgba(18, 26, 55, 0.12);
+
+  --text-main: #0d1526;
+  --text-secondary: #4b5563;
+
+  --kpi-positive: #22c55e;
+  --kpi-neutral: #64748b;
+
+  --chart-text: #0d1526;
+  --chart-grid: rgba(160, 170, 185, 0.55);
+
+  --table-header-bg: rgba(248, 250, 255, 0.9);
+  --table-row-bg: rgba(255, 255, 255, 0.96);
+  --table-row-alt-bg: rgba(244, 247, 255, 0.96);
+
+  --tooltip-bg-light: rgba(255, 255, 255, 0.95);
+  --tooltip-text-light: #000000;
+}
+
+:root.dark-mode {
+  --bg-gradient: radial-gradient(circle at top left, #030719 0, #050b2a 35%, #060822 100%);
+  --shell-bg: rgba(10, 18, 40, 0.96);
+  --shell-border: rgba(96, 111, 255, 0.5);
+  --shell-shadow: 0 28px 80px rgba(0, 0, 0, 0.8);
+
+  --sidebar-bg: linear-gradient(180deg, #070d26, #071133 70%, #050b24);
+  --sidebar-border: rgba(96, 111, 255, 0.6);
+
+  --panel-bg: rgba(16, 24, 56, 0.96);
+  --panel-border: rgba(129, 140, 248, 0.55);
+  --panel-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+
+  --text-main: #f9fafb;
+  --text-secondary: #cbd5f5;
+
+  --kpi-positive: #4ade80;
+  --kpi-neutral: #e5e7eb;
+
+  --chart-text: #e5e7eb;
+  --chart-grid: rgba(88, 104, 170, 0.8);
+
+  --table-header-bg: rgba(20, 30, 70, 1);
+  --table-row-bg: rgba(16, 24, 56, 1);
+  --table-row-alt-bg: rgba(26, 36, 80, 1);
+
+  --tooltip-bg-light: rgba(35, 45, 85, 0.95);
+  --tooltip-text-light: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
 }
 
 body {
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
-  color-scheme: light;
-
-  // Set a default background, font and text colors for the application using
-  // Angular Material's system-level CSS variables. Learn more about these
-  // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
-  font: var(--mat-sys-body-medium);
-
-  // Reset the user agent margin.
-  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
 }
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.app-shell {
+  width: min(1240px, 100vw - 32px);
+  height: calc(100vh - 16px);
+  border-radius: 32px;
+  background: var(--shell-bg);
+  border: 1px solid var(--shell-border);
+  box-shadow: var(--shell-shadow);
+  overflow: hidden;
+  backdrop-filter: blur(28px);
+}
+
+.app-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  padding: 24px 28px;
+  overflow: auto;
+}
+
+.app-sidenav {
+  width: 88px;
+  background: var(--sidebar-bg);
+  color: var(--text-main);
+  padding: 22px 12px;
+  border-right: 1px solid var(--sidebar-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(26px);
+}
+
+.sidenav-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 20%, #4f83ff, #2f3be5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.logo-text {
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.sidenav-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.nav-item {
+  width: 100%;
+  border-radius: 14px;
+  min-height: 46px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: 0.18s ease;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.24);
+  transform: translateY(-1px);
+}
+
+.nav-item.active {
+  background: rgba(255, 255, 255, 0.33);
+  color: var(--text-main);
+}
+
+.app-toolbar {
+  height: 64px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--panel-border);
+  backdrop-filter: blur(22px);
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.dark-mode .app-toolbar {
+  background: linear-gradient(90deg, rgba(16, 24, 56, 0.95), rgba(40, 56, 120, 0.9));
+}
+
+.app-title {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.dashboard-page {
+  width: 100%;
+  height: 100%;
+  color: var(--text-main);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.header-left h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.glass-button {
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--panel-border);
+  backdrop-filter: blur(20px);
+  color: var(--text-main);
+}
+
+.dark-mode .glass-button {
+  color: #e5e7ff;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.32), rgba(129, 140, 248, 0.45));
+  border-color: rgba(191, 219, 254, 0.7);
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.kpi-card {
+  background: var(--panel-bg);
+  border-radius: 18px;
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--text-main);
+}
+
+.dark-mode .kpi-card {
+  background: linear-gradient(145deg, rgba(24, 35, 80, 0.98), rgba(34, 46, 98, 0.98));
+  border-color: rgba(129, 140, 248, 0.8);
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.95);
+  color: #f9fafb;
+}
+
+.kpi-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-secondary);
+}
+
+.dark-mode .kpi-label {
+  color: #c7d2fe;
+}
+
+.kpi-value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.dark-mode .kpi-value {
+  color: #ffffff;
+}
+
+.kpi-trend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+
+.kpi-trend.positive {
+  color: var(--kpi-positive);
+}
+
+.kpi-trend.neutral {
+  color: var(--kpi-neutral);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+  gap: 18px;
+}
+
+.panel-card {
+  background: var(--panel-bg);
+  border-radius: 18px;
+  border: 1px solid var(--panel-border);
+  box-shadow: var(--panel-shadow);
+  padding: 16px 18px;
+  backdrop-filter: blur(18px);
+  color: var(--text-main);
+}
+
+.dark-mode .panel-card {
+  background: linear-gradient(145deg, rgba(16, 24, 56, 0.97), rgba(25, 33, 74, 0.97));
+  border-color: rgba(129, 140, 248, 0.7);
+  color: #e5e7eb;
+}
+
+.table-card {
+  grid-column: 1 / -1;
+}
+
+.glass-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 18px;
+  overflow: hidden;
+  font-size: 0.88rem;
+}
+
+.glass-table thead {
+  background: var(--table-header-bg);
+}
+
+.glass-table th,
+.glass-table td {
+  padding: 12px 14px;
+  color: var(--text-main);
+}
+
+.glass-table th {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.glass-table tr:nth-child(odd) td {
+  background: var(--table-row-bg);
+}
+
+.glass-table tr:nth-child(even) td {
+  background: var(--table-row-alt-bg);
+}
+
+.dark-mode .glass-table thead {
+  background: var(--table-header-bg);
+}
+
+.dark-mode .glass-table th,
+.dark-mode .glass-table td {
+  color: #e5e7ff;
+}
+
+.dark-mode .glass-table tr:nth-child(odd) td {
+  background: var(--table-row-bg);
+}
+
+.dark-mode .glass-table tr:nth-child(even) td {
+  background: var(--table-row-alt-bg);
+}
+
+.glass-table tr:hover td {
+  background: rgba(90, 130, 255, 0.2);
+}
+
+.apexcharts-title-text,
+.apexcharts-xaxis-label,
+.apexcharts-yaxis-label,
+.apexcharts-legend-text,
+.apexcharts-text,
+.apexcharts-svg text[fill] {
+  fill: var(--chart-text) !important;
+  color: var(--chart-text) !important;
+}
+
+.apexcharts-gridline line {
+  stroke: var(--chart-grid) !important;
+}
+
+/* LIGHT MODE TOOLTIP */
+:root .apexcharts-tooltip,
+:root .apexcharts-tooltip-title {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(180, 185, 200, 0.6) !important;
+  color: #000000 !important;
+  fill: #000000 !important;
+  filter: none !important;
+}
+
+:root .apexcharts-tooltip * {
+  color: #000000 !important;
+  fill: #000000 !important;
+  filter: none !important;
+}
+
+:root .apexcharts-tooltip-title {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* DARK MODE TOOLTIP */
+:root.dark-mode .apexcharts-tooltip,
+:root.dark-mode .apexcharts-tooltip-title {
+  background: rgba(35, 45, 85, 0.98) !important;
+  border: 1px solid rgba(129, 140, 248, 0.8) !important;
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  filter: none !important;
+}
+
+:root.dark-mode .apexcharts-tooltip * {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  filter: none !important;
+}
+
+:root.dark-mode .apexcharts-tooltip-title {
+  background: transparent !important;
+  border: none !important;
+}
+
+:root.dark-mode .apexcharts-tooltip-marker {
+  background: #4f83ff !important;
+  border-color: #ffffff !important;
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 0;
+  }
+
+  .app-shell {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .app-main {
+    padding: 16px 18px;
+  }
+
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}

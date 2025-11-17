@@ -22,6 +22,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.3.12",
     "@angular/cdk": "^20.2.13",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
@@ -31,8 +32,11 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@apollo/client": "^4.0.1",
+    "apexcharts": "^5.3.6",
     "apollo-angular": "^12.1.0",
     "graphql": "^16",
+    "ng-apexcharts": "^2.0.3",
+    "ngx-apexcharts": "^0.8.5",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
