@@ -5,6 +5,7 @@ from .config import settings
 engine = create_engine(
     settings.DATABASE_URL,
     pool_pre_ping=True,
+    connect_args={"charset": "utf8mb4"}
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

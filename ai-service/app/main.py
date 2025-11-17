@@ -506,12 +506,15 @@ def health():
 @app.post("/analyze", response_model=schemas.AnalysisResponse)
 def analyze(request: schemas.AnalysisRequest, db: Session = Depends(get_db)):
     sql = generate_sql(request.question)
+
     try:
-        rows = db.execute(text(sql)).fetchall()
+        rows = db.execute(text(sql)).mappings().all()
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"SQL error: {str(e)}")
-    result = [dict(row._mapping) for row in rows]
+
+    result = [dict(row) for row in rows]
     summary = summarize_result(request.question, result)
+
     return schemas.AnalysisResponse(
         sql=sql,
         result=result,
