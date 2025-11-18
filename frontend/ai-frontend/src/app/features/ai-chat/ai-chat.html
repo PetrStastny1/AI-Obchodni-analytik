@@ -1,1 +1,57 @@
-<p>ai-chat works!</p>
+<div class="chat-container">
+  <div class="messages" #messagesContainer>
+    <div
+      class="message"
+      *ngFor="let msg of messages"
+      [ngClass]="{
+        'from-user': msg.sender === 'user',
+        'from-ai': msg.sender === 'ai'
+      }"
+    >
+      <div class="bubble">
+        <div *ngIf="msg.text" class="text">{{ msg.text }}</div>
+        <table *ngIf="msg.table" class="result-table">
+          <thead>
+            <tr>
+              <th *ngFor="let col of msg.table.columns">{{ col }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of msg.table.rows">
+              <td *ngFor="let col of msg.table.columns">{{ row[col] }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div *ngIf="typingText" class="message from-ai">
+      <div class="bubble typing-text">{{ typingText }}</div>
+    </div>
+
+    <div *ngIf="loading && !typingText" class="message from-ai typing">
+      <div class="bubble typing-bubble">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-bar">
+    <input
+      [(ngModel)]="question"
+      (keyup.enter)="send()"
+      placeholder="Zadejte zprávu..."
+    />
+
+    <button
+      class="mic-btn"
+      [class.recording]="isRecording"
+      [class.countdown]="countdownActive"
+      (click)="toggleRecording()"
+    >
+      🎤
+    </button>
+
+    <button class="send-btn" (click)="send()">➤</button>
+  </div>
+</div>

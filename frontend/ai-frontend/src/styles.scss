@@ -112,6 +112,26 @@ body {
   backdrop-filter: blur(26px);
 }
 
+.dark-mode .app-sidenav {
+  background: linear-gradient(
+    180deg,
+    rgba(51, 6, 157, 0.162),
+    rgba(53, 46, 72, 0.85)
+  );
+  border-right: 1px solid rgba(160, 140, 255, 0.45);
+  backdrop-filter: blur(28px);
+}
+
+.app-content.dark-mode,
+.app-main.dark-mode {
+  background: linear-gradient(180deg, #020617, #050a1d 60%, #030615);
+}
+
+:root.dark-mode .app-content,
+:root.dark-mode .app-main {
+  background: linear-gradient(180deg, #020617, #050a1d 60%, #030615);
+}
+
 .sidenav-header {
   display: flex;
   flex-direction: column;
@@ -388,7 +408,6 @@ body {
   stroke: var(--chart-grid) !important;
 }
 
-/* LIGHT MODE TOOLTIP */
 :root .apexcharts-tooltip,
 :root .apexcharts-tooltip-title {
   background: rgba(255, 255, 255, 0.95) !important;
@@ -409,7 +428,6 @@ body {
   border: none !important;
 }
 
-/* DARK MODE TOOLTIP */
 :root.dark-mode .apexcharts-tooltip,
 :root.dark-mode .apexcharts-tooltip-title {
   background: rgba(35, 45, 85, 0.98) !important;

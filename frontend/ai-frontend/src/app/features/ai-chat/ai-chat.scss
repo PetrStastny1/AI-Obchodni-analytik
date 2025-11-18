@@ -1,0 +1,232 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
+.message {
+  display: flex;
+  margin-bottom: 1.2rem;
+}
+
+.from-user {
+  justify-content: flex-end;
+}
+
+/* USER BUBBLE - LIGHT MODE (default) */
+.from-user .bubble {
+  background: linear-gradient(135deg, rgba(220, 230, 255, 0.85), rgba(200, 220, 255, 0.85));
+  color: #1e293b;
+  border-radius: 22px;
+  padding: 1rem 1.4rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(100, 120, 180, 0.15);
+  max-width: 78%;
+}
+
+/* AI BUBBLE - LIGHT MODE (default) */
+.from-ai .bubble {
+  background: linear-gradient(135deg, rgba(240, 242, 250, 0.95), rgba(230, 235, 248, 0.95));
+  color: #1e293b;
+  border-radius: 22px;
+  padding: 1rem 1.4rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(100, 120, 180, 0.12);
+  backdrop-filter: blur(26px);
+  max-width: 78%;
+}
+
+/* ==================== DARK MODE ==================== */
+
+/* USER BUBBLE - DARK MODE */
+body.dark-mode .from-user .bubble,
+.dark-mode .from-user .bubble,
+:host-context(.dark-mode) .from-user .bubble {
+  background: linear-gradient(135deg, rgba(70, 125, 255, 0.55), rgba(40, 80, 255, 0.45)) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(60, 100, 255, 0.45) !important;
+  border: 1px solid rgba(120, 150, 255, 0.25) !important;
+}
+
+/* AI BUBBLE - DARK MODE */
+body.dark-mode .from-ai .bubble,
+.dark-mode .from-ai .bubble,
+:host-context(.dark-mode) .from-ai .bubble {
+  background: linear-gradient(135deg, rgba(50, 70, 160, 0.35), rgba(120, 70, 255, 0.32)) !important;
+  border: 1px solid rgba(150, 160, 255, 0.25) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55) !important;
+  backdrop-filter: blur(26px) !important;
+}
+
+/* TYPING TEXT - LIGHT MODE */
+.typing-text {
+  white-space: pre-wrap;
+  padding: 1rem 1.4rem;
+  border-radius: 22px;
+  color: #1e293b;
+  background: linear-gradient(135deg, rgba(240, 242, 250, 0.95), rgba(230, 235, 248, 0.95));
+  border: 1px solid rgba(100, 120, 180, 0.12);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* TYPING TEXT - DARK MODE */
+body.dark-mode .typing-text,
+.dark-mode .typing-text,
+:host-context(.dark-mode) .typing-text {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(35, 45, 85, 0.45), rgba(90, 60, 200, 0.45)) !important;
+  border: 1px solid rgba(150, 160, 255, 0.25) !important;
+  box-shadow: 0 6px 22px rgba(10, 14, 35, 0.55) !important;
+}
+
+/* RESULT TABLE - LIGHT MODE */
+.result-table {
+  margin-top: 0.8rem;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.result-table th,
+.result-table td {
+  padding: 0.5rem 0.7rem;
+  background: rgba(240, 242, 250, 0.5);
+  color: #1e293b;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* RESULT TABLE - DARK MODE */
+body.dark-mode .result-table th,
+body.dark-mode .result-table td,
+.dark-mode .result-table th,
+.dark-mode .result-table td,
+:host-context(.dark-mode) .result-table th,
+:host-context(.dark-mode) .result-table td {
+  background: rgba(255, 255, 255, 0.04) !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* INPUT BAR */
+.input-bar {
+  display: flex;
+  gap: 0.8rem;
+  padding-top: 1rem;
+}
+
+.input-bar input,
+.mic-btn,
+.send-btn {
+  height: 50px;
+  border-radius: 25px;
+  font-size: 1rem;
+}
+
+/* INPUT - LIGHT MODE */
+.input-bar input {
+  flex: 1;
+  background: rgba(240, 242, 250, 0.7);
+  border: 1px solid rgba(100, 120, 180, 0.2);
+  color: #1e293b;
+  backdrop-filter: blur(22px);
+  padding: 0 1.25rem;
+}
+
+.input-bar input::placeholder {
+  color: rgba(30, 41, 59, 0.5);
+}
+
+/* INPUT - DARK MODE */
+body.dark-mode .input-bar input,
+.dark-mode .input-bar input,
+:host-context(.dark-mode) .input-bar input {
+  background: linear-gradient(135deg, rgba(35, 45, 85, 0.45), rgba(90, 60, 200, 0.45)) !important;
+  border: 1px solid rgba(150, 160, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+body.dark-mode .input-bar input::placeholder,
+.dark-mode .input-bar input::placeholder,
+:host-context(.dark-mode) .input-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* SEND BUTTON - LIGHT MODE */
+.send-btn {
+  width: 50px;
+  background: linear-gradient(135deg, rgba(70, 120, 255, 0.85), rgba(40, 80, 255, 0.85));
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 6px rgba(50, 90, 255, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.send-btn:hover {
+  transform: scale(1.05);
+}
+
+/* SEND BUTTON - DARK MODE */
+body.dark-mode .send-btn,
+.dark-mode .send-btn,
+:host-context(.dark-mode) .send-btn {
+  background: linear-gradient(135deg, rgba(70, 120, 255, 0.95), rgba(40, 80, 255, 0.95)) !important;
+  box-shadow: 0 4px 10px rgba(50, 90, 255, 0.35) !important;
+}
+
+/* MICROPHONE BUTTON - LIGHT MODE */
+.mic-btn {
+  width: 50px;
+  background: rgba(240, 242, 250, 0.7);
+  border: 1px solid rgba(100, 120, 180, 0.2);
+  color: #1e293b;
+  backdrop-filter: blur(22px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.mic-btn:hover {
+  transform: scale(1.05);
+}
+
+/* MICROPHONE BUTTON - DARK MODE */
+body.dark-mode .mic-btn,
+.dark-mode .mic-btn,
+:host-context(.dark-mode) .mic-btn {
+  background: linear-gradient(135deg, rgba(35, 45, 85, 0.45), rgba(90, 60, 200, 0.45)) !important;
+  border: 1px solid rgba(150, 160, 255, 0.25) !important;
+  color: #ffffff !important;
+}
+
+.mic-btn.recording {
+  background: rgba(255, 60, 60, 0.42) !important;
+  border-color: rgba(255, 60, 60, 0.65) !important;
+}
+
+.mic-btn.countdown::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid rgba(150, 160, 255, 0.75);
+  animation: micCountdown 5s linear forwards;
+}
+
+@keyframes micCountdown {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
