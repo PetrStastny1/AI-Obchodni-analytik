@@ -1,60 +1,65 @@
-<mat-sidenav-container class="app-shell">
-  <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
-    <div class="sidenav-header">
-      <div class="logo-circle">AI</div>
-      <div class="logo-text">AI Obchodní Analytik</div>
-    </div>
+@if (isAuthenticated$()) {
+  <mat-sidenav-container class="app-shell">
+    <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
+      <div class="sidenav-header">
+        <div class="logo-circle">AI</div>
+        <div class="logo-text">AI Obchodní Analytik</div>
+      </div>
 
-    <nav class="sidenav-nav">
-      <button
-        mat-button
-        class="nav-item"
-        routerLink="/dashboard"
-        routerLinkActive="active">
-        <mat-icon>analytics</mat-icon>
-        <span>Dashboard</span>
-      </button>
+      <nav class="sidenav-nav">
+        <button mat-button class="nav-item" routerLink="/dashboard" routerLinkActive="active">
+          <mat-icon>analytics</mat-icon>
+          <span>Dashboard</span>
+        </button>
 
-      <button
-        mat-button
-        class="nav-item"
-        routerLink="/sales"
-        routerLinkActive="active">
-        <mat-icon>table_chart</mat-icon>
-        <span>Prodeje</span>
-      </button>
+        <button mat-button class="nav-item" routerLink="/sales" routerLinkActive="active">
+          <mat-icon>table_chart</mat-icon>
+          <span>Prodeje</span>
+        </button>
 
-      <button
-        mat-button
-        class="nav-item"
-        routerLink="/ai"
-        routerLinkActive="active">
-        <mat-icon>smart_toy</mat-icon>
-        <span>AI dotazy</span>
-      </button>
-    </nav>
-  </mat-sidenav>
+        <button mat-button class="nav-item" routerLink="/import" routerLinkActive="active">
+          <mat-icon>file_upload</mat-icon>
+          <span>Import CSV</span>
+        </button>
 
-  <mat-sidenav-content class="app-content">
-    <mat-toolbar class="app-toolbar">
-      <button mat-icon-button class="mobile-menu" (click)="sidenav.toggle()">
-        <mat-icon>menu</mat-icon>
-      </button>
+        <button mat-button class="nav-item" routerLink="/ai-chat" routerLinkActive="active">
+          <mat-icon>smart_toy</mat-icon>
+          <span>AI dotazy</span>
+        </button>
 
-      <span class="app-title">AI Business Analytics</span>
-      <span class="spacer"></span>
+        <button mat-button class="nav-item logout-btn" (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span>Odhlásit se</span>
+        </button>
+      </nav>
+    </mat-sidenav>
 
-      <button mat-icon-button (click)="toggleDarkMode()">
-        <mat-icon>{{ isDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-      </button>
+    <mat-sidenav-content class="app-content">
+      <mat-toolbar class="app-toolbar">
 
-      <button mat-icon-button>
-        <mat-icon>account_circle</mat-icon>
-      </button>
-    </mat-toolbar>
+        <button mat-icon-button class="mobile-menu" (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
 
-    <main class="app-main">
-      <router-outlet></router-outlet>
-    </main>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+        <span class="app-title">AI Business Analytics</span>
+        <span class="spacer"></span>
+
+        <button class="theme-toggle" mat-icon-button (click)="toggleDarkMode()">
+          <mat-icon>{{ isDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+        </button>
+
+        <button mat-icon-button routerLink="/settings">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+
+      </mat-toolbar>
+
+      <main class="app-main">
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+} @else {
+  <router-outlet></router-outlet>
+}

@@ -1,0 +1,320 @@
+date,product,quantity,price
+2025-08-19,Don Papa Baroko,1,1090
+2025-08-19,Macallan Sherry Oak 12y,1,1890
+2025-08-19,A.H. Riise Non Plus Ultra,1,3490
+2025-08-19,Moët & Chandon Brut Imperial,1,1290
+2025-08-20,Yamazaki 12y,1,4490
+2025-08-20,Hendrick's Gin,2,899
+2025-08-20,Ardbeg 10y,1,1490
+2025-08-21,Dictador XO Insolent,1,3990
+2025-08-21,Gin Mare Mediterranean,1,1190
+2025-08-21,Lagavulin 16y,1,2490
+2025-08-22,Don Papa Baroko,2,1090
+2025-08-22,Champagne Bollinger Special Cuvée,1,1690
+2025-08-22,Caol Ila 12y,1,1490
+2025-08-23,Hennessy XO,1,5290
+2025-08-23,Macallan Sherry Oak 12y,2,1890
+2025-08-23,Dictador 20y,1,2690
+2025-08-23,A.H. Riise Non Plus Ultra,1,3490
+2025-08-24,Don Julio Reposado,1,1590
+2025-08-24,Champagne Moët & Chandon Rosé,1,1450
+2025-08-24,Glenfiddich 12y,2,1050
+2025-08-25,Ron Zacapa 23y,1,1390
+2025-08-25,Glenlivet 18y,1,2490
+2025-08-25,Tanqueray No. TEN,1,999
+2025-08-26,Armand de Brignac Brut Gold (Ace of Spades),1,8490
+2025-08-26,Ron Abuelo Centuria,1,4290
+2025-08-26,Macallan Rare Cask,1,6990
+2025-08-27,Jägermeister Manifest,1,1190
+2025-08-27,Chivas Regal 25y,1,5490
+2025-08-27,Hennessy XO,1,5290
+2025-08-28,Don Papa Masskara,2,1290
+2025-08-28,Dictador XO Perpetual,1,3890
+2025-08-28,Gin Mare Mediterranean,1,1190
+2025-08-29,Yamazaki 18y,1,10500
+2025-08-29,A.H. Riise Non Plus Ultra,1,3490
+2025-08-29,Beluga Gold Line,1,4990
+2025-08-30,Champagne Cristal Louis Roederer,1,8990
+2025-08-30,Laphroaig 10y,1,1390
+2025-08-30,Hendrick's Gin,1,899
+2025-08-31,Macallan Sherry Oak 12y,2,1890
+2025-08-31,Ron Zacapa 23y,1,1390
+2025-08-31,Glenlivet 12y,2,990
+2025-09-01,Glenlivet 18y,1,2490
+2025-09-01,Don Papa Baroko,1,1090
+2025-09-01,Beluga Transatlantic Racing,1,1590
+2025-09-02,Macallan Triple Cask 18y,1,5590
+2025-09-02,Champagne Veuve Clicquot Brut,1,1290
+2025-09-02,Hennessy VSOP,1,1790
+2025-09-02,Hendrick's Gin,2,899
+2025-09-03,Ron Zacapa XO,1,2990
+2025-09-03,Dictador 20y,1,2690
+2025-09-03,Laphroaig Quarter Cask,1,1490
+2025-09-03,Glenfiddich 12y,2,1050
+2025-09-04,Yamazaki 12y,1,4490
+2025-09-04,Ardbeg Uigeadail,1,2490
+2025-09-04,Gin Mare Mediterranean,1,1190
+2025-09-04,A.H. Riise Non Plus Ultra,1,3490
+2025-09-05,Macallan Sherry Oak 18y,1,8990
+2025-09-05,Don Papa Masskara,1,1290
+2025-09-05,Hennessy XO,1,5290
+2025-09-05,Beluga Gold Line,1,4990
+2025-09-06,Ron Abuelo Centuria,1,4290
+2025-09-06,Champagne Taittinger Brut Reserve,1,1090
+2025-09-06,Caol Ila 12y,1,1490
+2025-09-06,Tanqueray No. TEN,1,999
+2025-09-07,Ron Zacapa 23y,1,1390
+2025-09-07,Macallan Rare Cask,1,6990
+2025-09-07,Glenmorangie Signet,1,4990
+2025-09-07,Hendrick's Gin,1,899
+2025-09-08,Lagavulin 16y,1,2490
+2025-09-08,Don Julio Reposado,1,1590
+2025-09-08,Champagne Bollinger Special Cuvée,1,1690
+2025-09-08,Dictador XO Insolent,1,3990
+2025-09-09,A.H. Riise Non Plus Ultra,1,3490
+2025-09-09,Armand de Brignac Brut Gold (Ace of Spades),1,8490
+2025-09-09,Hennessy XO,1,5290
+2025-09-09,Glenlivet 15y,1,1790
+2025-09-10,Yamazaki 18y,1,10500
+2025-09-10,Macallan Sherry Oak 12y,1,1890
+2025-09-10,Don Papa Baroko,2,1090
+2025-09-10,Champagne Moët & Chandon Rosé,1,1450
+2025-09-11,Ron Zacapa XO,1,2990
+2025-09-11,Gin Mare Mediterranean,1,1190
+2025-09-11,Hennessy VSOP,1,1790
+2025-09-11,Laphroaig 10y,1,1390
+2025-09-12,Macallan Rare Cask,1,6990
+2025-09-12,Beluga Transatlantic Racing,1,1590
+2025-09-12,A.H. Riise Non Plus Ultra,1,3490
+2025-09-12,Don Papa Masskara,1,1290
+2025-09-13,Ron Abuelo Centuria,1,4290
+2025-09-13,Champagne Cristal Louis Roederer,1,8990
+2025-09-13,Ardbeg 10y,1,1490
+2025-09-13,Glenfiddich 21y Reserva,1,5490
+2025-09-14,Macallan Sherry Oak 18y,1,8990
+2025-09-14,Don Julio Blanco,1,1390
+2025-09-14,Champagne Veuve Clicquot Brut,1,1290
+2025-09-14,Hendrick's Gin,1,899
+2025-09-15,Ron Zacapa 23y,1,1390
+2025-09-15,Ardbeg Uigeadail,1,2490
+2025-09-15,Macallan Triple Cask 12y,1,1890
+2025-09-15,Beluga Noble,1,1090
+2025-09-16,Hennessy XO,1,5290
+2025-09-16,Glenlivet 18y,1,2490
+2025-09-16,Don Papa Baroko,1,1090
+2025-09-16,Caol Ila 25y,1,7290
+2025-09-17,Yamazaki 12y,1,4490
+2025-09-17,Dictador XO Insolent,1,3990
+2025-09-17,Gin Mare Mediterranean,1,1190
+2025-09-17,Macallan Rare Cask,1,6990
+2025-09-18,Ron Abuelo Centuria,1,4290
+2025-09-18,Champagne Krug Grande Cuvée,1,8490
+2025-09-18,Glenfiddich 21y Reserva,1,5490
+2025-09-18,Don Papa Masskara,2,1290
+2025-09-19,Macallan Sherry Oak 12y,1,1890
+2025-09-19,Don Julio Reposado,1,1590
+2025-09-19,Hennessy VSOP,2,1790
+2025-09-19,Beluga Gold Line,1,4990
+2025-09-20,Ron Zacapa XO,1,2990
+2025-09-20,Laphroaig Quarter Cask,1,1490
+2025-09-20,Gin Hendrick's Neptunia,1,1050
+2025-09-20,Champagne Dom Pérignon Vintage,1,6490
+2025-09-21,Yamazaki 18y,1,10500
+2025-09-21,Glenlivet 15y,1,1790
+2025-09-21,Ardbeg 10y,1,1490
+2025-09-21,Don Papa Baroko,1,1090
+2025-09-22,Hennessy XO,1,5290
+2025-09-22,Macallan Triple Cask 18y,1,5590
+2025-09-22,Dictador 20y,1,2690
+2025-09-22,Champagne Moët & Chandon Brut,1,1190
+2025-09-23,Ron Zacapa 23y,1,1390
+2025-09-23,Beluga Transatlantic Racing,1,1590
+2025-09-23,A.H. Riise Non Plus Ultra,1,3490
+2025-09-23,Glenfiddich 12y,2,1050
+2025-09-24,Yamazaki 12y,1,4490
+2025-09-24,Don Julio Añejo,1,1890
+2025-09-24,Champagne Bollinger Special Cuvée,1,1690
+2025-09-24,Gin Mare Mediterranean,1,1190
+2025-09-25,Macallan Rare Cask,1,6990
+2025-09-25,Ron Abuelo Centuria,1,4290
+2025-09-25,Lagavulin 16y,1,2490
+2025-09-25,Hendrick's Gin,1,899
+2025-09-26,Champagne Cristal Louis Roederer,1,8990
+2025-09-26,Ardbeg Uigeadail,1,2490
+2025-09-26,Glenlivet 18y,1,2490
+2025-09-26,Don Papa Masskara,1,1290
+2025-09-27,Hennessy XO,1,5290
+2025-09-27,Ron Zacapa XO,1,2990
+2025-09-27,Gin Hendrick's Orbium,1,1050
+2025-09-27,Macallan Sherry Oak 12y,1,1890
+2025-09-28,Yamazaki 18y,1,10500
+2025-09-28,Glenfiddich 21y Reserva,1,5490
+2025-09-28,Casa Dragones Blanco,1,3490
+2025-09-28,Don Papa Baroko,1,1090
+2025-09-29,Armand de Brignac Brut Gold (Ace of Spades),1,8490
+2025-09-29,Hennessy VSOP,1,1790
+2025-09-29,Glenlivet 15y,1,1790
+2025-09-29,Champagne Moët Ice Impérial,1,1590
+2025-09-30,Ron Zacapa 23y,1,1390
+2025-09-30,Laphroaig 10y,1,1390
+2025-09-30,Beluga Noble,1,1090
+2025-09-30,Don Julio Reposado,1,1590
+2025-10-01,Macallan Sherry Oak 12y,1,1890
+2025-10-01,Hendrick's Gin,1,899
+2025-10-01,Ron Zacapa XO,1,2990
+2025-10-01,Dom Pérignon Rosé Vintage,1,8990
+2025-10-02,Yamazaki 12y,1,4490
+2025-10-02,Dictador XO Insolent,1,3990
+2025-10-02,Laphroaig Quarter Cask,1,1490
+2025-10-02,Beluga Noble,1,1090
+2025-10-03,Hennessy XO,1,5290
+2025-10-03,Macallan Rare Cask,1,6990
+2025-10-03,Don Papa Baroko,1,1090
+2025-10-03,Glenlivet 15y,1,1790
+2025-10-04,Ron Abuelo Centuria,1,4290
+2025-10-04,Champagne Krug Grande Cuvée,1,8490
+2025-10-04,Glenfiddich 21y Reserva,1,5490
+2025-10-04,Gin Mare Mediterranean,1,1190
+2025-10-05,Ardbeg 10y,1,1490
+2025-10-05,Champagne Moët & Chandon Brut,1,1190
+2025-10-05,Don Julio Blanco,1,1390
+2025-10-05,Hennessy VSOP,1,1790
+2025-10-06,Yamazaki 18y,1,10500
+2025-10-06,Macallan Triple Cask 18y,1,5590
+2025-10-06,Dictador 20y,1,2690
+2025-10-06,Don Papa Masskara,1,1290
+2025-10-07,Ron Zacapa 23y,1,1390
+2025-10-07,Lagavulin 16y,1,2490
+2025-10-07,Gin Hendrick's Neptunia,1,1050
+2025-10-07,Champagne Veuve Clicquot Brut,1,1290
+2025-10-08,Hennessy XO,1,5290
+2025-10-08,Yamazaki 12y,1,4490
+2025-10-08,Beluga Gold Line,1,4990
+2025-10-08,Macallan Sherry Oak 12y,1,1890
+2025-10-09,Don Julio Añejo,1,1890
+2025-10-09,Dictador XO Perpetual,1,3890
+2025-10-09,Ron Zacapa XO,1,2990
+2025-10-09,Champagne Bollinger Special Cuvée,1,1690
+2025-10-10,Armand de Brignac Brut Gold (Ace of Spades),1,8490
+2025-10-10,Glenlivet 18y,1,2490
+2025-10-10,Don Papa Baroko,2,1090
+2025-10-10,Hendrick's Gin,1,899
+2025-10-11,Ron Abuelo Centuria,1,4290
+2025-10-11,Macallan Rare Cask,1,6990
+2025-10-11,Champagne Cristal Louis Roederer,1,8990
+2025-10-11,Don Julio Reposado,1,1590
+2025-10-12,Hennessy VS,2,1090
+2025-10-12,Ardbeg Uigeadail,1,2490
+2025-10-12,Macallan Triple Cask 12y,1,1890
+2025-10-12,Ron Zacapa 23y,1,1390
+2025-10-13,Glenfiddich 18y,1,2790
+2025-10-13,Casa Dragones Blanco,1,3490
+2025-10-13,Gin Mare Mediterranean,1,1190
+2025-10-13,Dom Pérignon Vintage,1,6490
+2025-10-14,Yamazaki 12y,1,4490
+2025-10-14,Hennessy XO,1,5290
+2025-10-14,Macallan Sherry Oak 12y,1,1890
+2025-10-14,Don Papa Masskara,1,1290
+2025-10-15,Ron Zacapa XO,1,2990
+2025-10-15,Glenlivet 15y,1,1790
+2025-10-15,Laphroaig 10y,1,1390
+2025-10-15,Champagne Moët Ice Impérial,1,1590
+2025-10-18,Hennessy XO,1,5290
+2025-10-18,Macallan Double Cask 15y,1,3190
+2025-10-18,Johnnie Walker Blue Label,1,4490
+2025-10-19,Don Papa Baroko,3,1090
+2025-10-19,Hendrick's Gin,2,899
+2025-10-19,Caol Ila 12y,1,1490
+2025-10-20,Yamazaki 12y,1,4490
+2025-10-20,A.H. Riise Non Plus Ultra,1,3490
+2025-10-20,Ron Zacapa XO,1,2990
+2025-10-21,Don Julio Reposado,2,1590
+2025-10-21,Teeling Single Malt,1,1390
+2025-10-21,Tanqueray No. TEN,3,999
+2025-10-22,Brugal 1888,2,1190
+2025-10-22,Casa Dragones Blanco,1,3490
+2025-10-22,Kavalan Solist Sherry,1,4690
+2025-10-23,Glenlivet 18y,1,2490
+2025-10-23,Dictador XO Insolent,1,3990
+2025-10-23,Macallan Sherry Oak 12y,2,1890
+2025-10-24,Laphroaig Quarter Cask,2,1490
+2025-10-24,Ardbeg Uigeadail,1,2690
+2025-10-24,Hennessy New Year's Edition,1,6190
+2025-10-25,Jack Daniel's Sinatra Select,1,4590
+2025-10-25,Gin Mare Mediterranean,2,1190
+2025-10-25,Michter's Bourbon US*1,1,2390
+2025-10-26,Chivas Regal 25y,1,5490
+2025-10-26,Johnnie Walker Green Label,2,1290
+2025-10-26,Beluga Gold Line Vodka,1,4990
+2025-10-27,Glenfiddich 21y Gran Reserva,1,6890
+2025-10-27,Ron Abuelo Centuria,1,4290
+2025-10-27,Hendrick's Flora Adora,2,899
+2025-10-28,Clase Azul Reposado,1,8990
+2025-10-28,Don Papa Port Cask,1,1590
+2025-10-28,Glenlivet 12y,3,990
+2025-10-29,Macallan Folio Series 7,1,12990
+2025-10-29,Ron Diplomático Single Vintage,1,3490
+2025-10-29,Mezcal Del Maguey Chichicapa,1,1890
+2025-10-30,Veuve Clicquot La Grande Dame,1,4990
+2025-10-30,Belvedere Single Estate Rye,1,1290
+2025-10-30,Don Julio 1942,1,5990
+2025-10-31,Armand de Brignac Brut Gold (Ace of Spades),1,8490
+2025-10-31,Clase Azul Plata,1,3490
+2025-10-31,Nikka From the Barrel,2,1390
+2025-11-01,Ron Zacapa XO,1,2990
+2025-11-01,Teeling Single Malt,2,1390
+2025-11-01,Tanqueray No. TEN,1,999
+2025-11-02,Macallan Sherry Oak 12y,2,1890
+2025-11-02,Johnnie Walker Blue Label,1,4490
+2025-11-02,Don Julio Reposado,2,1590
+2025-11-03,Dom Pérignon Vintage,1,5890
+2025-11-03,Brugal 1888,3,1190
+2025-11-03,Hendrick's Gin,2,899
+2025-11-04,Chivas Regal 25y,1,5490
+2025-11-04,A.H. Riise Non Plus Ultra,1,3490
+2025-11-04,Don Papa Baroko,3,1090
+2025-11-05,Glenlivet 18y,1,2490
+2025-11-05,Clase Azul Plata,1,3490
+2025-11-05,Michter's Rye US*1,2,2290
+2025-11-06,Beluga Gold Line Vodka,1,4990
+2025-11-06,Dictador XO Insolent,1,3990
+2025-11-06,Caol Ila 12y,2,1490
+2025-11-07,Armand de Brignac Brut Gold (Ace of Spades),1,8490
+2025-11-07,Don Papa Port Cask,2,1590
+2025-11-07,Ron Diplomático Reserva Exclusiva,3,1290
+2025-11-08,Hennessy XO,1,5290
+2025-11-08,Kavalan Solist Sherry,1,4690
+2025-11-08,Belvedere Single Estate Rye,2,1290
+2025-11-09,Macallan Double Cask 15y,1,3190
+2025-11-09,Tequila Patron Añejo,1,1890
+2025-11-09,Glenlivet 12y,3,990
+2025-11-10,Yamazaki 12y,1,4490
+2025-11-10,Dictador 20y,1,2690
+2025-11-10,Don Julio 1942,1,5990
+2025-11-11,Ruinart Blanc de Blancs,1,3290
+2025-11-11,Ardbeg Uigeadail,1,2690
+2025-11-11,Teeling Blackpitts Peated,1,1690
+2025-11-12,Brugal 1888,3,1190
+2025-11-12,Don Papa Masskara,2,1290
+2025-11-12,Hendrick's Flora Adora,2,899
+2025-11-13,Clase Azul Reposado,1,8990
+2025-11-13,Macallan Triple Cask 18y,1,7290
+2025-11-13,Veuve Clicquot Brut,2,1290
+2025-11-14,Glenfiddich 21y Gran Reserva,1,6890
+2025-11-14,Ron Abuelo Centuria,1,4290
+2025-11-14,Johnnie Walker Green Label,2,1290
+2025-11-15,Nikka From the Barrel,2,1390
+2025-11-15,Teeling Single Grain,2,1190
+2025-11-15,Gin Mare Mediterranean,1,1190
+2025-11-16,Don Papa Port Cask,3,1590
+2025-11-16,Laphroaig Quarter Cask,2,1490
+2025-11-16,Ruinart Rosé,1,3490
+2025-11-17,Armand de Brignac Brut Rose,1,11990
+2025-11-17,A.H. Riise Non Plus Ultra Black Edition,1,3890
+2025-11-17,Dictador XO Perpetual,1,4190
+2025-11-18,Macallan Rare Cask,1,8990
+2025-11-18,Clase Azul Plata,2,3490
+2025-11-18,Brugal 1888,3,1190
+2025-11-19,Glenlivet 21y Archive,1,4990
+2025-11-19,Dom Pérignon Vintage,1,5890
+2025-11-19,Don Julio Añejo,1,1890

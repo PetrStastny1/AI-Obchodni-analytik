@@ -1,0 +1,123 @@
+.dashboard-page {
+  .kpi-card,
+  .panel-card,
+  .table-card {
+    @extend .glass-panel !optional;
+  }
+
+  .kpi-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 132px;
+    padding: 18px 20px;
+
+    .kpi-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+    }
+
+    .kpi-value {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .kpi-trend {
+      font-size: 0.85rem;
+      opacity: 0.9;
+
+      mat-icon {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .panel-card {
+    padding: 20px 22px;
+
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+
+      h3 {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+    }
+
+    apx-chart {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .table-card {
+    padding: 20px 22px 10px;
+  }
+
+  .glass-table {
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+
+    thead {
+      background: rgba(248, 250, 252, 0.96);
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 11px 16px;
+    }
+
+    th {
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: none;
+    }
+
+    tr:nth-child(odd) td {
+      background: rgba(255, 255, 255, 0.96);
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(244, 247, 255, 0.96);
+    }
+
+    tr:hover td {
+      background: rgba(219, 234, 254, 0.9);
+    }
+  }
+
+  :root.dark-mode & .glass-table,
+  .dark-mode & .glass-table {
+    thead {
+      background: rgba(20, 30, 70, 1);
+    }
+
+    th,
+    td {
+      color: #e5e7ff;
+    }
+
+    tr:nth-child(odd) td {
+      background: rgba(16, 24, 56, 1);
+    }
+
+    tr:nth-child(even) td {
+      background: rgba(26, 36, 80, 1);
+    }
+
+    tr:hover td {
+      background: rgba(59, 130, 246, 0.22);
+    }
+  }
+}

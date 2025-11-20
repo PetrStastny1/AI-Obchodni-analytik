@@ -113,20 +113,13 @@ body {
 }
 
 .dark-mode .app-sidenav {
-  background: linear-gradient(
-    180deg,
-    rgba(51, 6, 157, 0.162),
-    rgba(53, 46, 72, 0.85)
-  );
+  background: linear-gradient(180deg, rgba(51, 6, 157, 0.162), rgba(53, 46, 72, 0.85));
   border-right: 1px solid rgba(160, 140, 255, 0.45);
   backdrop-filter: blur(28px);
 }
 
 .app-content.dark-mode,
-.app-main.dark-mode {
-  background: linear-gradient(180deg, #020617, #050a1d 60%, #030615);
-}
-
+.app-main.dark-mode,
 :root.dark-mode .app-content,
 :root.dark-mode .app-main {
   background: linear-gradient(180deg, #020617, #050a1d 60%, #030615);
@@ -453,6 +446,15 @@ body {
   border-color: #ffffff !important;
 }
 
+.apexcharts-line-series .apexcharts-series path {
+  stroke: rgba(99, 102, 241, 1) !important;
+  stroke-width: 3 !important;
+}
+
+.apexcharts-bar-series .apexcharts-series rect {
+  fill: rgba(99, 102, 241, 1) !important;
+}
+
 @media (max-width: 1024px) {
   body {
     padding: 0;
@@ -475,4 +477,21 @@ body {
   .content-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.glass-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.96));
+  border: 1px solid rgba(209, 213, 219, 0.9);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  border-radius: 22px;
+  backdrop-filter: blur(22px);
+  padding: 20px;
+  color: var(--text-main);
+}
+
+:root.dark-mode .glass-panel {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.98));
+  border-color: rgba(129, 140, 248, 0.6);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8);
+  color: #e5e7fb;
 }

@@ -1,0 +1,16 @@
+.sales-page {
+  padding: 2rem;
+  color: var(--text-color);
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .glass-table {
+    width: 100%;
+    backdrop-filter: blur(12px);
+    background: var(--glass-bg);
+    border-radius: 12px;
+  }
+}

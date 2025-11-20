@@ -1,0 +1,69 @@
+<div class="import-page">
+  <h2>Import CSV</h2>
+
+  <div class="upload-row">
+    <div class="left-side">
+      <label class="file-select glassy-neutral">
+        <input type="file" accept=".csv" (change)="selectFile($event)" hidden />
+        <mat-icon>attach_file</mat-icon>
+        <span>Vybrat soubor</span>
+      </label>
+
+      <span class="file-name">
+        {{ fileName || 'Žádný soubor nevybrán' }}
+      </span>
+    </div>
+
+    <button class="btn-primary upload-btn"
+            [disabled]="loading || !selectedFile"
+            (click)="upload()">
+      <mat-icon>file_upload</mat-icon>
+      <span>Nahrát</span>
+    </button>
+  </div>
+
+  <div class="history-header">
+    <h3>Historie importů</h3>
+
+    <div class="actions">
+      <button class="btn-secondary glassy-neutral" (click)="selectAll()">
+        Vybrat vše
+      </button>
+      <button class="btn-danger"
+              [disabled]="loading"
+              (click)="deleteSelected()">
+        Smazat
+      </button>
+    </div>
+  </div>
+
+  <table class="imports-table" *ngIf="imports.length > 0; else emptyState">
+    <thead>
+      <tr>
+        <th class="chk-col"></th>
+        <th>Soubor</th>
+        <th>Záznamů</th>
+        <th>Datum</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of imports">
+        <td class="chk-col">
+          <input type="checkbox" [(ngModel)]="i.selected" />
+        </td>
+        <td>{{ i.filename }}</td>
+        <td>{{ i.records }}</td>
+        <td>{{ i.createdAt | date: 'dd.MM.yyyy HH:mm' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #emptyState>
+    <div class="empty-state">
+      Zatím nemáš žádné importy. Nahraj první CSV soubor.
+    </div>
+  </ng-template>
+
+  <p class="message" *ngIf="message">{{ message }}</p>
+  <div class="loader" *ngIf="loading"></div>
+</div>

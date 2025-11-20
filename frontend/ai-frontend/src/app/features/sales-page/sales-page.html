@@ -1,0 +1,36 @@
+<div class="sales-page">
+  <h2>Prodeje</h2>
+
+  <table mat-table [dataSource]="sales" class="glass-table" *ngIf="!loading">
+
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef>Datum</th>
+      <td mat-cell *matCellDef="let s">{{ s.date | date:'yyyy-MM-dd' }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef>Produkt</th>
+      <td mat-cell *matCellDef="let s">{{ s.product }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="quantity">
+      <th mat-header-cell *matHeaderCellDef>Množství</th>
+      <td mat-cell *matCellDef="let s">{{ s.quantity }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef>Cena/ks</th>
+      <td mat-cell *matCellDef="let s">{{ s.price | currency:'CZK' }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="revenue">
+      <th mat-header-cell *matHeaderCellDef>Tržba</th>
+      <td mat-cell *matCellDef="let s">{{ s.quantity * s.price | currency:'CZK' }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <p *ngIf="loading">Načítání…</p>
+</div>

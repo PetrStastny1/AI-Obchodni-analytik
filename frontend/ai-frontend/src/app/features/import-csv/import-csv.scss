@@ -1,0 +1,172 @@
+.import-page {
+  padding: 2rem;
+  color: var(--text-main);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  h2 { font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem; }
+}
+
+.upload-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.left-side { display: flex; align-items: center; gap: 1rem; min-width: 0; }
+
+.glassy-neutral {
+  background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(15,23,42,0.35));
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  backdrop-filter: blur(16px);
+  color: var(--text-main);
+}
+
+.glassy-blue {
+  background: linear-gradient(135deg, rgba(138, 185, 251, 0.608), rgba(47, 88, 253, 0.55));
+  border: 1px solid rgba(165,200,255,0.6);
+  box-shadow: 0 10px 22px rgba(37,99,235,0.55);
+}
+
+.glassy-red {
+  background: linear-gradient(135deg, rgba(251,118,133,0.55), rgba(239,68,68,0.65));
+  border: 1px solid rgba(255,190,190,0.55);
+  box-shadow: 0 10px 20px rgba(239,68,68,0.55);
+}
+
+.glassy-neutral:hover,
+.glassy-blue:hover,
+.glassy-red:hover {
+  transform: translateY(-1px);
+}
+
+.glassy-neutral:hover {
+  background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(15,23,42,0.45));
+  box-shadow: 0 12px 20px rgba(0,0,0,0.22);
+}
+
+.glassy-blue:hover {
+  background: linear-gradient(135deg, rgba(115,175,255,0.55), rgba(60,100,255,0.75));
+  box-shadow: 0 14px 32px rgba(37,99,235,0.75);
+}
+
+.glassy-red:hover {
+  background: linear-gradient(135deg, rgba(255,135,155,0.65), rgba(239,68,68,0.85));
+  box-shadow: 0 14px 32px rgba(239,68,68,0.75);
+}
+
+button,
+.file-select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45rem;
+  padding: .7rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: .9rem;
+  min-width: 140px;
+  backdrop-filter: blur(16px);
+  border: 1px solid transparent;
+  transition: .16s;
+  mat-icon { font-size: 18px; }
+  &:disabled { opacity: .5; cursor: default; transform: none; box-shadow: none; }
+}
+
+.file-select {
+  @extend .glassy-neutral;
+  font-weight: 500;
+  span { white-space: nowrap; }
+}
+
+.dark-mode .file-select { color: #e2e8f0; }
+
+.file-name {
+  font-size: .95rem;
+  opacity: .8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 260px;
+}
+
+.btn-secondary { @extend .glassy-neutral; color: var(--text-main); }
+.dark-mode .btn-secondary { color: #e2e8f0; }
+
+.btn-primary {
+  @extend .glassy-blue;
+  color: #000000 !important;
+}
+
+.btn-danger {
+  @extend .glassy-red;
+  color: #000000 !important;
+}
+
+body.dark-mode .btn-primary,
+:host-context(.dark-mode) .btn-primary,
+.dark-mode .btn-primary {
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-danger,
+:host-context(.dark-mode) .btn-danger,
+.dark-mode .btn-danger {
+  color: #ffffff !important;
+}
+
+.history-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:1.5rem 0 .8rem;
+  h3 { font-size:1.2rem; font-weight:600; }
+  .actions { display:flex; gap:.6rem; }
+}
+
+.imports-table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:.9rem;
+  border-radius:1rem;
+  overflow:hidden;
+  text-align:center;
+  @extend .glassy-neutral;
+}
+
+.imports-table thead {
+  background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(15,23,42,0.35));
+  color: var(--text-main);
+}
+
+.dark-mode .imports-table thead {
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(15,23,42,0.45));
+  color: #e8edf4;
+}
+
+.imports-table th, .imports-table td {
+  padding:.9rem 1rem;
+  border-bottom:1px solid rgba(148,163,184,0.35);
+  color:var(--text-main);
+}
+
+.dark-mode .imports-table th, .dark-mode .imports-table td { color:#e8edf4; }
+
+.imports-table tr:last-child td { border-bottom:none; }
+
+.chk-col { width:52px; }
+
+.imports-table tbody tr:hover { background:rgba(255,255,255,0.14); }
+.dark-mode .imports-table tbody tr:hover { background:rgba(255,255,255,0.06); }
+
+.empty-state { margin-top:1.2rem; font-size:.9rem; opacity:.8; }
+.message { margin-top:1.2rem; font-weight:500; }
+.loader { margin-top:.8rem; }
+
+:host ::ng-deep .app-main {
+  background:transparent !important;
+  backdrop-filter:none !important;
+}
