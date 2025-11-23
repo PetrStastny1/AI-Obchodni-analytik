@@ -3,7 +3,8 @@
 
   <div class="upload-row">
     <div class="left-side">
-      <label class="file-select glassy-neutral">
+
+      <label class="glass-btn file-select">
         <input type="file" accept=".csv" (change)="selectFile($event)" hidden />
         <mat-icon>attach_file</mat-icon>
         <span>Vybrat soubor</span>
@@ -14,33 +15,33 @@
       </span>
     </div>
 
-    <button class="btn-primary upload-btn"
-            [disabled]="loading || !selectedFile"
-            (click)="upload()">
-      <mat-icon>file_upload</mat-icon>
-      <span>Nahrát</span>
-    </button>
+    <div class="right-actions">
+      <button class="glass-btn btn-blue"
+              [disabled]="loading || !selectedFile"
+              (click)="upload()">
+        <mat-icon>file_upload</mat-icon>
+        <span>Nahrát</span>
+      </button>
+
+      <button class="glass-btn btn-red"
+              [disabled]="loading || !hasSelection()"
+              (click)="deleteSelected()">
+        <mat-icon>delete</mat-icon>
+        <span>Smazat</span>
+      </button>
+    </div>
   </div>
 
   <div class="history-header">
     <h3>Historie importů</h3>
-
-    <div class="actions">
-      <button class="btn-secondary glassy-neutral" (click)="selectAll()">
-        Vybrat vše
-      </button>
-      <button class="btn-danger"
-              [disabled]="loading"
-              (click)="deleteSelected()">
-        Smazat
-      </button>
-    </div>
   </div>
 
   <table class="imports-table" *ngIf="imports.length > 0; else emptyState">
     <thead>
       <tr>
-        <th class="chk-col"></th>
+        <th class="chk-col">
+          <input type="checkbox" [checked]="allSelected" (change)="toggleSelectAll()" />
+        </th>
         <th>Soubor</th>
         <th>Záznamů</th>
         <th>Datum</th>
@@ -53,7 +54,7 @@
         </td>
         <td>{{ i.filename }}</td>
         <td>{{ i.records }}</td>
-        <td>{{ i.createdAt | date: 'dd.MM.yyyy HH:mm' }}</td>
+        <td>{{ i.importedAt | date:'dd.MM.yyyy HH:mm' }}</td>
       </tr>
     </tbody>
   </table>

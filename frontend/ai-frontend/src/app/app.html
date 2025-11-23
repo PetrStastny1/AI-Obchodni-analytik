@@ -1,79 +1,81 @@
 @if (isAuthenticated$()) {
   <mat-sidenav-container class="app-shell">
+
+    <!-- SIDEBAR -->
     <mat-sidenav #sidenav mode="side" opened class="app-sidenav">
       <div class="sidenav-header">
         <div class="logo-circle">AI</div>
-        <div class="logo-text">AI Obchodní Analytik</div>
+        <div class="logo-text">Business Analytics</div>
       </div>
 
       <nav class="sidenav-nav">
+
         <button mat-button class="nav-item" routerLink="/dashboard" routerLinkActive="active">
-          <mat-icon>analytics</mat-icon>
+          <mat-icon>home</mat-icon>
           <span>Dashboard</span>
         </button>
 
         <button mat-button class="nav-item" routerLink="/sales" routerLinkActive="active">
-          <mat-icon>table_chart</mat-icon>
+          <mat-icon>bar_chart</mat-icon>
           <span>Prodeje</span>
         </button>
 
         <button mat-button class="nav-item" routerLink="/import" routerLinkActive="active">
           <mat-icon>file_upload</mat-icon>
-          <span>Import CSV</span>
+          <span>Import</span>
         </button>
 
         <button mat-button class="nav-item" routerLink="/ai-chat" routerLinkActive="active">
           <mat-icon>smart_toy</mat-icon>
-          <span>AI dotazy</span>
+          <span>AI Dotazy</span>
         </button>
+
       </nav>
     </mat-sidenav>
 
+    <!-- MAIN -->
     <mat-sidenav-content class="app-content">
+
+      <!-- TOP TOOLBAR -->
       <mat-toolbar class="app-toolbar">
+
         <button mat-icon-button class="mobile-menu" (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
 
-        <span class="app-title">AI Business Analytics</span>
         <span class="spacer"></span>
 
-        <div class="toolbar-actions">
-          <button mat-icon-button class="theme-toggle-btn" (click)="toggleDarkMode()">
-            <mat-icon>{{ isDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-          </button>
+        <!-- AVATAR MENU BUTTON -->
+        <button mat-icon-button class="user-menu-btn" [matMenuTriggerFor]="userMenu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
 
-          <button
-            mat-icon-button
-            class="user-menu-btn"
-            [matMenuTriggerFor]="userMenu"
-          >
-            <mat-icon>account_circle</mat-icon>
-          </button>
-        </div>
       </mat-toolbar>
 
       <main class="app-main">
         <router-outlet></router-outlet>
       </main>
+
     </mat-sidenav-content>
   </mat-sidenav-container>
 
-  <!-- 🔽 PROFILOVÉ MENU – OPRAVENO -->
-  <mat-menu #userMenu="matMenu" panelClass="user-menu-panel">
+  <!-- 🔵 ROUNDED POPUP MENU -->
+  <mat-menu #userMenu="matMenu" class="user-menu-panel" panelClass="user-menu-panel">
+
     <div class="user-menu-header" mat-menu-item disabled>
-      <div class="avatar-circle">{{ userInitials() }}</div>
+      <div class="avatar-circle" [ngClass]="currentUser()?.isAdmin ? 'avatar-admin' : 'avatar-user'">
+        <mat-icon class="avatar-icon">
+          {{ currentUser()?.isAdmin ? 'shield' : 'person' }}
+        </mat-icon>
+      </div>
       <div class="user-meta">
-        <div class="user-name">{{ currentUser()?.username || 'Neznámý uživatel' }}</div>
-        <div class="user-role">{{ currentUser()?.isAdmin ? 'Admin' : 'Uživatel' }}</div>
+        <div class="user-name">{{ currentUser()?.username || 'Uživatel' }}</div>
       </div>
     </div>
 
-    <button
-      mat-menu-item
-      *ngIf="currentUser()?.isAdmin"
-      routerLink="/users"
-    >
+    <mat-divider></mat-divider>
+
+    <button mat-menu-item routerLink="/users" *ngIf="currentUser()?.isAdmin">
       <mat-icon>group</mat-icon>
       <span>Správa uživatelů</span>
     </button>
@@ -82,7 +84,9 @@
       <mat-icon>logout</mat-icon>
       <span>Odhlásit se</span>
     </button>
+
   </mat-menu>
+
 } @else {
   <router-outlet></router-outlet>
 }

@@ -1,8 +1,14 @@
 <div class="login-wrapper">
   <div class="login-card">
+
+    <div class="login-avatar">
+      <mat-icon>person</mat-icon>
+    </div>
+
     <h2>Přihlášení</h2>
 
     <form (ngSubmit)="onSubmit()">
+
       <div class="input-group">
         <label>Uživatel</label>
         <input
@@ -25,8 +31,9 @@
         />
       </div>
 
-      <button class="login-btn" [disabled]="loading">
-        {{ loading ? 'Přihlašování...' : 'Přihlásit se' }}
+      <button class="glass-login" [disabled]="loading">
+        <mat-icon>login</mat-icon>
+        <span>{{ loading ? 'Přihlašování...' : 'Přihlásit se' }}</span>
       </button>
 
       <div class="err-msg" *ngIf="error">

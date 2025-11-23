@@ -9,8 +9,7 @@ import {
   ApexChart,
   ApexXAxis,
   ApexStroke,
-  ApexTheme,
-  ApexDataLabels
+  ApexTheme
 } from 'ng-apexcharts';
 
 @Component({
@@ -23,16 +22,19 @@ import {
 export class AiChatComponent implements OnInit {
   @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
 
+  /* ============ CHAT STATE ============ */
   question = '';
   messages: any[] = [];
   typingText = '';
   loading = false;
 
+  /* ============ VOICE RECOGNITION ============ */
   isRecording = false;
   countdownActive = false;
   countdownTimeoutId: any;
   recognition: any;
 
+  /* ============ MINI CHART ============ */
   activeChart: {
     series: ApexAxisChartSeries;
     chart: ApexChart;
@@ -42,12 +44,30 @@ export class AiChatComponent implements OnInit {
     stroke: ApexStroke;
   } | null = null;
 
+  /* ============ AI HINTS ============ */
+  tips = [
+    { label: 'Top produkty podle tržeb', q: 'Jaké jsou top produkty podle tržeb?' },
+    { label: 'Nejlepší den v prodejích', q: 'Který den měl největší tržby?' },
+    { label: 'Celkové tržby za měsíc', q: 'Jaké jsou celkové tržby za poslední měsíc?' },
+    { label: 'Počet prodaných kusů', q: 'Kolik kusů se prodalo celkem?' }
+  ];
+
   constructor(private apollo: Apollo) {}
 
+  /* =======================================
+     ▶️ QUICK ASK FROM TIPS
+     ======================================= */
+  quickAsk(q: string) {
+    this.question = q;
+    this.send();
+  }
+
+  /* =======================================
+     🎙️ SPEECH RECOGNITION INIT
+     ======================================= */
   ngOnInit() {
     const SpeechRecognition =
-      (window as any).SpeechRecognition ||
-      (window as any).webkitSpeechRecognition;
+      (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
     if (!SpeechRecognition) return;
 
@@ -60,6 +80,7 @@ export class AiChatComponent implements OnInit {
       const transcript = Array.from(event.results)
         .map((r: any) => r[0].transcript)
         .join(' ');
+
       this.typingText = transcript;
       this.question = transcript;
       this.smoothScroll();
@@ -71,6 +92,9 @@ export class AiChatComponent implements OnInit {
     };
   }
 
+  /* =======================================
+     🎙️ RECORDING + COUNTDOWN
+     ======================================= */
   toggleRecording() {
     if (!this.recognition) return;
     this.clearCountdown();
@@ -104,24 +128,18 @@ export class AiChatComponent implements OnInit {
     this.countdownActive = false;
   }
 
+  /* =======================================
+     📜 SMOOTH SCROLL
+     ======================================= */
   smoothScroll() {
     const container = this.messagesContainer?.nativeElement;
     if (!container) return;
-    const start = container.scrollTop;
-    const end = container.scrollHeight;
-    const duration = 400;
-    let startTime: number | null = null;
-
-    const animate = (t: number) => {
-      if (!startTime) startTime = t;
-      const progress = Math.min((t - startTime) / duration, 1);
-      container.scrollTop = start + (end - start) * progress;
-      if (progress < 1) requestAnimationFrame(animate);
-    };
-
-    requestAnimationFrame(animate);
+    container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
   }
 
+  /* =======================================
+     ⌨️ TYPEWRITER EFFECT
+     ======================================= */
   typeWriter(text: string, callback: () => void) {
     let i = 0;
     const speed = 12;
@@ -138,13 +156,16 @@ export class AiChatComponent implements OnInit {
     tick();
   }
 
+  /* =======================================
+     📩 SEND MESSAGE + PROCESS AI RESULT
+     ======================================= */
   send() {
     if (!this.question.trim()) return;
 
     this.clearCountdown();
     const q = this.question.trim();
-    this.messages.push({ sender: 'user', text: q });
 
+    this.messages.push({ sender: 'user', text: q });
     this.question = '';
     this.typingText = '';
     this.loading = true;
@@ -171,6 +192,7 @@ export class AiChatComponent implements OnInit {
       .subscribe(res => {
         const ai = (res as any).data.askAI;
 
+        /* =================== TABLE PARSE =================== */
         let table = null;
         try {
           const rows = JSON.parse(ai.rawResultJson);
@@ -180,26 +202,30 @@ export class AiChatComponent implements OnInit {
 
         this.typingText = '';
         this.messages.push({ sender: 'ai', text: '', table });
+        this.smoothScroll();
 
+        /* =================== CHART GENERATION =================== */
         if (ai.chart && ai.chart.categories.length > 0) {
           this.activeChart = {
             series: [{ data: ai.chart.values }],
             chart: { type: 'bar', height: 260, toolbar: { show: false } },
             xaxis: { categories: ai.chart.categories },
             theme: { mode: 'light' },
-            colors: ['#9b42ff'],
+            colors: ['#6A89FF'],
             stroke: { width: 3, curve: 'smooth' }
           };
         }
 
         const last = this.messages[this.messages.length - 1];
 
+        /* =================== TYPEWRITER SUMMARY =================== */
         this.typeWriter(ai.summary, () => {
           last.text = this.typingText;
           this.typingText = '';
 
           if (q.toLowerCase().includes('sql')) {
             this.messages.push({ sender: 'ai', text: ai.sql });
+            this.smoothScroll();
           }
 
           this.loading = false;

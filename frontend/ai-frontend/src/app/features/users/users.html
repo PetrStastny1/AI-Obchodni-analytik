@@ -1,4 +1,5 @@
 <div class="users-page">
+
   <div class="page-header">
     <div>
       <h2>Správa uživatelů</h2>
@@ -12,7 +13,10 @@
   </div>
 
   <div class="table-wrapper">
+
     <table mat-table [dataSource]="users" class="glass-table">
+
+      <!-- Avatar -->
       <ng-container matColumnDef="avatar">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let u">
@@ -22,6 +26,7 @@
         </td>
       </ng-container>
 
+      <!-- Username -->
       <ng-container matColumnDef="username">
         <th mat-header-cell *matHeaderCellDef>Uživatel</th>
         <td mat-cell *matCellDef="let u">
@@ -32,6 +37,7 @@
         </td>
       </ng-container>
 
+      <!-- Role -->
       <ng-container matColumnDef="role">
         <th mat-header-cell *matHeaderCellDef>Role</th>
         <td mat-cell *matCellDef="let u">
@@ -41,29 +47,29 @@
         </td>
       </ng-container>
 
+      <!-- Status -->
       <ng-container matColumnDef="status">
         <th mat-header-cell *matHeaderCellDef>Stav</th>
         <td mat-cell *matCellDef="let u">
-          <span
-            class="status-chip"
-            [class.active]="u.isActive"
-            [class.inactive]="!u.isActive"
-          >
+          <span class="status-chip" [class.active]="u.isActive" [class.inactive]="!u.isActive">
             {{ u.isActive ? 'Aktivní' : 'Deaktivovaný' }}
           </span>
         </td>
       </ng-container>
 
+      <!-- Created -->
       <ng-container matColumnDef="createdAt">
         <th mat-header-cell *matHeaderCellDef>Vytvořen</th>
         <td mat-cell *matCellDef="let u">
-          {{ u.createdAt | date: 'd.M.y HH:mm' }}
+          {{ u.createdAt | date:'d.M.y HH:mm' }}
         </td>
       </ng-container>
 
+      <!-- Actions -->
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef></th>
         <td mat-cell *matCellDef="let u" class="actions-cell">
+
           <button mat-icon-button matTooltip="Přepnout roli" (click)="toggleRole(u)">
             <mat-icon>{{ u.isAdmin ? 'arrow_downward' : 'arrow_upward' }}</mat-icon>
           </button>
@@ -75,13 +81,17 @@
           <button mat-icon-button matTooltip="Reset hesla" (click)="resetPassword(u)">
             <mat-icon>key</mat-icon>
           </button>
+
         </td>
       </ng-container>
 
+      <!-- Render rows -->
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
     </table>
 
+    <!-- Empty State -->
     <div class="empty-state" *ngIf="!loading && users.length === 0">
       <mat-icon>group_off</mat-icon>
       <p>Žádní uživatelé zatím nebyli vytvořeni.</p>
@@ -90,9 +100,11 @@
       </button>
     </div>
 
+    <!-- Loading -->
     <div class="loading-overlay" *ngIf="loading">
       <mat-progress-spinner mode="indeterminate" diameter="32"></mat-progress-spinner>
       <span>Načítám uživatele…</span>
     </div>
+
   </div>
 </div>

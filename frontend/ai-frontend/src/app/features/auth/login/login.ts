@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
 import { AuthService } from '../../../core/auth/auth.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { AuthService } from '../../../core/auth/auth.service';
   standalone: true,
   templateUrl: './login.html',
   styleUrls: ['./login.scss'],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, MatIconModule],
 })
 export class LoginComponent {
   private auth = inject(AuthService);

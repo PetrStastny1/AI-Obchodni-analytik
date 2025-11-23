@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { Apollo, gql } from 'apollo-angular';
 
 const GET_SALES = gql`
@@ -18,7 +19,11 @@ const GET_SALES = gql`
 @Component({
   selector: 'app-sales-page',
   standalone: true,
-  imports: [CommonModule, MatTableModule],
+  imports: [
+    CommonModule,
+    MatTableModule,
+    MatProgressSpinnerModule
+  ],
   templateUrl: './sales-page.html',
   styleUrls: ['./sales-page.scss']
 })

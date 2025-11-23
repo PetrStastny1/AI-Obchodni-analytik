@@ -24,11 +24,13 @@ export class ImportCsvComponent {
   message = '';
   loading = false;
 
+  allSelected = false;
+
   imports: {
     id: number;
     filename: string;
     records: number;
-    createdAt: string;
+    importedAt: string;
     selected?: boolean;
   }[] = [];
 
@@ -36,12 +38,14 @@ export class ImportCsvComponent {
     this.loadImports();
   }
 
+  /** 📌 Vybere soubor */
   selectFile(event: Event) {
     const input = event.target as HTMLInputElement;
     this.selectedFile = input.files?.[0] ?? null;
     this.fileName = this.selectedFile ? this.selectedFile.name : '';
   }
 
+  /** 📤 Nahrání CSV na backend */
   upload() {
     if (!this.selectedFile) return;
     this.loading = true;
@@ -65,17 +69,33 @@ export class ImportCsvComponent {
       });
   }
 
+  /** 🔄 Načte historii importů */
   loadImports() {
     this.http.get<any[]>('http://localhost:3000/sales/imports')
       .subscribe(data => {
-        this.imports = data.map(i => ({ ...i, selected: false }));
+        this.imports = data.map(i => ({
+          id: i.id,
+          filename: i.filename,
+          records: i.records,
+          importedAt: i.imported_at || i.importedAt, // 🤝 podporuje obě varianty
+          selected: false
+        }));
+        this.allSelected = false;
       });
   }
 
-  selectAll() {
-    this.imports.forEach(i => i.selected = true);
+  /** ✔️ Přepne checkbox v headeru */
+  toggleSelectAll() {
+    this.allSelected = !this.allSelected;
+    this.imports.forEach(i => i.selected = this.allSelected);
   }
 
+  /** 🔍 Zda má něco označené */
+  hasSelection() {
+    return this.imports.some(i => i.selected);
+  }
+
+  /** 🗑️ Smazání vybraných importů */
   deleteSelected() {
     const ids = this.imports.filter(i => i.selected).map(i => i.id);
     if (!ids.length) return;

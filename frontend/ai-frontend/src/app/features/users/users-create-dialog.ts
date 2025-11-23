@@ -1,12 +1,14 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgModel } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import type { CreateUserInput } from './users.types';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
   standalone: true,
@@ -17,13 +19,15 @@ import type { CreateUserInput } from './users.types';
     MatCheckboxModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   templateUrl: './users-create-dialog.html',
   styleUrls: ['./users-create-dialog.scss']
 })
 export class UsersCreateDialogComponent {
   private dialogRef = inject(MatDialogRef<UsersCreateDialogComponent>);
+  hidePassword: boolean = true;
 
   form: CreateUserInput = {
     username: '',
