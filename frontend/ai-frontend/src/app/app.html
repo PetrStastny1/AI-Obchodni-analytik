@@ -33,21 +33,29 @@
       </nav>
     </mat-sidenav>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <mat-sidenav-content class="app-content">
 
       <!-- TOP TOOLBAR -->
       <mat-toolbar class="app-toolbar">
 
-        <button mat-icon-button class="mobile-menu" (click)="sidenav.toggle()">
+        <!-- BURGER on mobile -->
+        <button class="toolbar-icon-btn mobile-menu" (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
 
         <span class="spacer"></span>
 
-        <!-- AVATAR MENU BUTTON -->
-        <button mat-icon-button class="user-menu-btn" [matMenuTriggerFor]="userMenu">
-          <mat-icon>account_circle</mat-icon>
+        <!-- 🔵 ADMIN ONLY: Users -->
+        <button class="toolbar-icon-btn"
+                *ngIf="isAdmin()" 
+                (click)="goUsers()">
+          <mat-icon>group</mat-icon>
+        </button>
+
+        <!-- 🔴 Logout -->
+        <button class="toolbar-icon-btn" (click)="logout()">
+          <mat-icon>logout</mat-icon>
         </button>
 
       </mat-toolbar>
@@ -58,34 +66,6 @@
 
     </mat-sidenav-content>
   </mat-sidenav-container>
-
-  <!-- 🔵 ROUNDED POPUP MENU -->
-  <mat-menu #userMenu="matMenu" class="user-menu-panel" panelClass="user-menu-panel">
-
-    <div class="user-menu-header" mat-menu-item disabled>
-      <div class="avatar-circle" [ngClass]="currentUser()?.isAdmin ? 'avatar-admin' : 'avatar-user'">
-        <mat-icon class="avatar-icon">
-          {{ currentUser()?.isAdmin ? 'shield' : 'person' }}
-        </mat-icon>
-      </div>
-      <div class="user-meta">
-        <div class="user-name">{{ currentUser()?.username || 'Uživatel' }}</div>
-      </div>
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <button mat-menu-item routerLink="/users" *ngIf="currentUser()?.isAdmin">
-      <mat-icon>group</mat-icon>
-      <span>Správa uživatelů</span>
-    </button>
-
-    <button mat-menu-item (click)="logout()">
-      <mat-icon>logout</mat-icon>
-      <span>Odhlásit se</span>
-    </button>
-
-  </mat-menu>
 
 } @else {
   <router-outlet></router-outlet>

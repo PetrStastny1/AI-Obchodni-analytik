@@ -19,7 +19,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
 
 import { filter } from 'rxjs/operators';
 import { AuthService } from './core/auth/auth.service';
@@ -37,7 +36,6 @@ import { AuthService } from './core/auth/auth.service';
     MatButtonModule,
     MatIconModule,
     MatListModule,
-    MatMenuModule,
   ],
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
@@ -47,19 +45,18 @@ export class App {
 
   private auth = inject(AuthService);
 
-  isDark = signal(window.matchMedia('(prefers-color-scheme: dark)').matches);
-
+  /** === Signals === */
   isAuthenticated$ = computed(() => this.auth.isLoggedIn());
   currentUser = computed(() => this.auth.getUser());
-  userInitials = computed(() => {
+
+  /** Admin check */
+  isAdmin = computed(() => {
     const user = this.currentUser();
-    if (!user?.username) return '?';
-    return user.username.charAt(0).toUpperCase();
+    return !!user?.isAdmin; // ✔️ správně
   });
 
   constructor(private router: Router) {
-    this.applyInitialTheme();
-
+    /** Zavře menu na mobilu po navigaci */
     this.router.events
       .pipe(filter((e) => e instanceof NavigationEnd))
       .subscribe(() => {
@@ -69,21 +66,13 @@ export class App {
       });
   }
 
-  private applyInitialTheme() {
-    const root = document.documentElement;
-    if (this.isDark()) root.classList.add('dark-mode');
-  }
-
-  toggleDarkMode() {
-    this.isDark.update((v) => !v);
-    document.documentElement.classList.toggle('dark-mode', this.isDark());
+  /** === Toolbar actions === */
+  goUsers() {
+    this.router.navigate(['/users']);
   }
 
   logout() {
     this.auth.logout();
-  }
-
-  goToUserAdmin() {
-    this.router.navigate(['/users']);
+    this.router.navigate(['/login']);
   }
 }
