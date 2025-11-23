@@ -441,7 +441,7 @@ def custom_docs():
                             <div class="chip">Angular dashboard</div>
                         </div>
                         <p class="muted" style="margin-top:0.7rem;">
-                            Tento AI microservice je volán z NestJS backendu (GraphQL resolver <code>askAI</code>) a výsledky
+                            Tento AI microservice je volán z NestJS backendu a výsledky
                             se zobrazují v Angular BI dashboardu (AI sekce).
                         </p>
                     </div>
