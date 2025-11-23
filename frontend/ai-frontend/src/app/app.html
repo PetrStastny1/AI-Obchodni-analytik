@@ -26,17 +26,11 @@
           <mat-icon>smart_toy</mat-icon>
           <span>AI dotazy</span>
         </button>
-
-        <button mat-button class="nav-item logout-btn" (click)="logout()">
-          <mat-icon>logout</mat-icon>
-          <span>Odhlásit se</span>
-        </button>
       </nav>
     </mat-sidenav>
 
     <mat-sidenav-content class="app-content">
       <mat-toolbar class="app-toolbar">
-
         <button mat-icon-button class="mobile-menu" (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
@@ -44,14 +38,19 @@
         <span class="app-title">AI Business Analytics</span>
         <span class="spacer"></span>
 
-        <button class="theme-toggle" mat-icon-button (click)="toggleDarkMode()">
-          <mat-icon>{{ isDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
-        </button>
+        <div class="toolbar-actions">
+          <button mat-icon-button class="theme-toggle-btn" (click)="toggleDarkMode()">
+            <mat-icon>{{ isDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+          </button>
 
-        <button mat-icon-button routerLink="/settings">
-          <mat-icon>account_circle</mat-icon>
-        </button>
-
+          <button
+            mat-icon-button
+            class="user-menu-btn"
+            [matMenuTriggerFor]="userMenu"
+          >
+            <mat-icon>account_circle</mat-icon>
+          </button>
+        </div>
       </mat-toolbar>
 
       <main class="app-main">
@@ -60,6 +59,30 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 
+  <!-- 🔽 PROFILOVÉ MENU – OPRAVENO -->
+  <mat-menu #userMenu="matMenu" panelClass="user-menu-panel">
+    <div class="user-menu-header" mat-menu-item disabled>
+      <div class="avatar-circle">{{ userInitials() }}</div>
+      <div class="user-meta">
+        <div class="user-name">{{ currentUser()?.username || 'Neznámý uživatel' }}</div>
+        <div class="user-role">{{ currentUser()?.isAdmin ? 'Admin' : 'Uživatel' }}</div>
+      </div>
+    </div>
+
+    <button
+      mat-menu-item
+      *ngIf="currentUser()?.isAdmin"
+      routerLink="/users"
+    >
+      <mat-icon>group</mat-icon>
+      <span>Správa uživatelů</span>
+    </button>
+
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>logout</mat-icon>
+      <span>Odhlásit se</span>
+    </button>
+  </mat-menu>
 } @else {
   <router-outlet></router-outlet>
 }

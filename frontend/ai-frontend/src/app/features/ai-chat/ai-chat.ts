@@ -3,11 +3,20 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
+import {
+  NgApexchartsModule,
+  ApexAxisChartSeries,
+  ApexChart,
+  ApexXAxis,
+  ApexStroke,
+  ApexTheme,
+  ApexDataLabels
+} from 'ng-apexcharts';
 
 @Component({
   selector: 'app-ai-chat',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, NgApexchartsModule],
   templateUrl: './ai-chat.html',
   styleUrls: ['./ai-chat.scss']
 })
@@ -15,14 +24,23 @@ export class AiChatComponent implements OnInit {
   @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
 
   question = '';
-  loading = false;
   messages: any[] = [];
   typingText = '';
+  loading = false;
 
   isRecording = false;
   countdownActive = false;
   countdownTimeoutId: any;
   recognition: any;
+
+  activeChart: {
+    series: ApexAxisChartSeries;
+    chart: ApexChart;
+    xaxis: ApexXAxis;
+    theme: ApexTheme;
+    colors: string[];
+    stroke: ApexStroke;
+  } | null = null;
 
   constructor(private apollo: Apollo) {}
 
@@ -130,6 +148,7 @@ export class AiChatComponent implements OnInit {
     this.question = '';
     this.typingText = '';
     this.loading = true;
+    this.activeChart = null;
     this.smoothScroll();
 
     this.apollo
@@ -140,6 +159,10 @@ export class AiChatComponent implements OnInit {
               sql
               rawResultJson
               summary
+              chart {
+                categories
+                values
+              }
             }
           }
         `,
@@ -157,6 +180,17 @@ export class AiChatComponent implements OnInit {
 
         this.typingText = '';
         this.messages.push({ sender: 'ai', text: '', table });
+
+        if (ai.chart && ai.chart.categories.length > 0) {
+          this.activeChart = {
+            series: [{ data: ai.chart.values }],
+            chart: { type: 'bar', height: 260, toolbar: { show: false } },
+            xaxis: { categories: ai.chart.categories },
+            theme: { mode: 'light' },
+            colors: ['#9b42ff'],
+            stroke: { width: 3, curve: 'smooth' }
+          };
+        }
 
         const last = this.messages[this.messages.length - 1];
 

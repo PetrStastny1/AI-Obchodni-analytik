@@ -1,57 +1,52 @@
-<div class="chat-container">
-  <div class="messages" #messagesContainer>
-    <div
-      class="message"
-      *ngFor="let msg of messages"
-      [ngClass]="{
-        'from-user': msg.sender === 'user',
-        'from-ai': msg.sender === 'ai'
-      }"
-    >
-      <div class="bubble">
-        <div *ngIf="msg.text" class="text">{{ msg.text }}</div>
-        <table *ngIf="msg.table" class="result-table">
-          <thead>
-            <tr>
-              <th *ngFor="let col of msg.table.columns">{{ col }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let row of msg.table.rows">
-              <td *ngFor="let col of msg.table.columns">{{ row[col] }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+<div class="ai-chat-wrapper">
+  <div class="chat-panel">
+    <div class="messages" #messagesContainer>
+      <ng-container *ngFor="let msg of messages">
+        <div class="bubble" [ngClass]="{
+          'user': msg.sender === 'user',
+          'ai': msg.sender === 'ai'
+        }">
+          <div *ngIf="msg.text" class="text">{{ msg.text }}</div>
 
-    <div *ngIf="typingText" class="message from-ai">
-      <div class="bubble typing-text">{{ typingText }}</div>
-    </div>
+          <table *ngIf="msg.table" class="result-table">
+            <thead>
+              <tr>
+                <th *ngFor="let col of msg.table.columns">{{ col }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let row of msg.table.rows">
+                <td *ngFor="let col of msg.table.columns">{{ row[col] }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </ng-container>
 
-    <div *ngIf="loading && !typingText" class="message from-ai typing">
-      <div class="bubble typing-bubble">
+      <div class="bubble ai typing" *ngIf="typingText">{{ typingText }}</div>
+
+      <div class="bubble ai typing-dots" *ngIf="loading && !typingText">
         <span class="dot"></span><span class="dot"></span><span class="dot"></span>
       </div>
     </div>
+
+    <div class="input-row">
+      <input [(ngModel)]="question" (keyup.enter)="send()" placeholder="Zeptej se na prodeje, trendy, produkty..." />
+
+      <button class="mic-btn" [class.recording]="isRecording" [class.countdown]="countdownActive" (click)="toggleRecording()">🎤</button>
+
+      <button class="send-btn" (click)="send()">➤</button>
+    </div>
   </div>
 
-  <div class="input-bar">
-    <input
-      [(ngModel)]="question"
-      (keyup.enter)="send()"
-      placeholder="Zadejte zprávu..."
-    />
-
-    <button
-      class="mic-btn"
-      [class.recording]="isRecording"
-      [class.countdown]="countdownActive"
-      (click)="toggleRecording()"
-    >
-      🎤
-    </button>
-
-    <button class="send-btn" (click)="send()">➤</button>
+  <div class="graph-panel" *ngIf="activeChart">
+    <apx-chart
+      [series]="activeChart.series"
+      [chart]="activeChart.chart"
+      [xaxis]="activeChart.xaxis"
+      [theme]="activeChart.theme"
+      [colors]="activeChart.colors"
+      [stroke]="activeChart.stroke">
+    </apx-chart>
   </div>
 </div>

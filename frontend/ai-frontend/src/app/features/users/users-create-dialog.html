@@ -1,0 +1,29 @@
+<div class="dialog-wrapper">
+  <h3>Nový uživatel</h3>
+
+  <form>
+    <mat-form-field appearance="outline" class="field">
+      <mat-label>Uživatelské jméno</mat-label>
+      <input matInput [(ngModel)]="form.username" name="username" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="field">
+      <mat-label>E-mail (nepovinný)</mat-label>
+      <input matInput [(ngModel)]="form.email" name="email" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="field">
+      <mat-label>Heslo</mat-label>
+      <input matInput type="password" [(ngModel)]="form.password" name="password" />
+    </mat-form-field>
+
+    <div class="checkbox-row">
+      <mat-checkbox [(ngModel)]="form.isAdmin" name="isAdmin">Admin</mat-checkbox>
+    </div>
+  </form>
+
+  <div class="dialog-actions">
+    <button mat-stroked-button (click)="cancel()">Zrušit</button>
+    <button mat-flat-button color="primary" (click)="save()">Vytvořit</button>
+  </div>
+</div>

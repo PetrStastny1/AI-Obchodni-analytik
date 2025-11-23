@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../core/auth/auth.service';
 
@@ -13,9 +12,8 @@ import { AuthService } from '../../../core/auth/auth.service';
   imports: [CommonModule, FormsModule],
 })
 export class LoginComponent {
-  private http = inject(HttpClient);
-  private router = inject(Router);
   private auth = inject(AuthService);
+  private router = inject(Router);
 
   username = '';
   password = '';
@@ -26,23 +24,18 @@ export class LoginComponent {
     this.error = '';
     this.loading = true;
 
-    this.http
-      .post<{ access_token: string }>('http://localhost:3000/auth/login', {
-        username: this.username,
-        password: this.password,
-      })
+    this.auth.login(this.username, this.password)
       .subscribe({
         next: (res) => {
-          localStorage.setItem('token', res.access_token);
-
-          this.auth.setLoggedIn(true);
-
+          this.auth.saveSession(res.token, res.user);
           this.router.navigate(['/dashboard']);
         },
         error: (err) => {
           this.error = err?.error?.message || 'Neplatné přihlašovací údaje.';
-        },
+        }
       })
-      .add(() => (this.loading = false));
+      .add(() => {
+        this.loading = false;
+      });
   }
 }

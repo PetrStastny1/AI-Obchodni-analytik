@@ -5,22 +5,19 @@ import { appConfig } from './app/app.config';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { importProvidersFrom } from '@angular/core';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import ApexCharts from 'apexcharts';
 
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './app/core/auth/auth.interceptor';
-
-(window as any).ApexCharts = ApexCharts;
+import { APOLLO_PROVIDER } from './app/core/graphql/apollo.config';
 
 bootstrapApplication(App, {
   providers: [
-    ...appConfig.providers,
-
     provideAnimations(),
     importProvidersFrom(NgApexchartsModule),
+    provideHttpClient(withInterceptors([authInterceptor])),
 
-    provideHttpClient(
-      withInterceptors([authInterceptor])
-    )
+    APOLLO_PROVIDER,
+
+    ...appConfig.providers,
   ],
 });

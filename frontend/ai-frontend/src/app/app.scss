@@ -1,16 +1,126 @@
-.theme-toggle {
-  position: fixed;
-  top: 1rem;
-  right: 1.2rem;
-  z-index: 9999;
+.app-toolbar {
+  display: flex;
+  align-items: center;
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .toolbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Kulatá průhledná tlačítka */
+.theme-toggle-btn,
+.user-menu-btn {
   backdrop-filter: blur(14px);
-  border-radius: 50%;
-  padding: 6px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.25);
-  color: var(--text-main);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.22);
+  transition: background 0.22s ease, border 0.22s ease;
 
   &:hover {
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.35);
+    border-color: rgba(255, 255, 255, 0.65);
+  }
+
+  .mat-icon {
+    font-size: 20px;
+  }
+}
+
+/* Menu tlačítko má vždy o něco výraznější kontrast */
+.user-menu-btn {
+  background: rgba(255, 255, 255, 0.30);
+}
+
+/* === PROFILOVÉ MENU === */
+:host ::ng-deep .user-menu-panel .mat-mdc-menu-content {
+  border-radius: 18px !important;
+  overflow: hidden;
+  backdrop-filter: blur(22px) !important;
+  background: radial-gradient(circle at top left,
+    rgba(255, 255, 255, 0.92),
+    rgba(236, 243, 255, 0.92)
+  ) !important;
+  border: 1px solid rgba(255, 255, 255, 0.80) !important;
+  box-shadow: 0 26px 65px rgba(15, 23, 42, 0.42) !important;
+  padding: 0.6rem 0.85rem !important;
+}
+
+.user-menu-panel {
+  .user-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.2rem 0 0.45rem 0;
+  }
+
+  .avatar-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.35);
+  }
+
+  .user-meta {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.86rem;
+    line-height: 1.15rem;
+
+    .user-name {
+      font-weight: 600;
+      opacity: 0.95;
+      color: var(--text-main);
+    }
+
+    .user-role {
+      opacity: 0.78;
+      font-weight: 500;
+      color: var(--text-secondary);
+    }
+  }
+}
+
+/* 🌓 DARK MODE */
+.dark-theme {
+  :host ::ng-deep .user-menu-panel .mat-mdc-menu-content {
+    background: radial-gradient(circle at top left,
+      rgba(18, 20, 33, 0.92),
+      rgba(14, 17, 26, 0.92)
+    ) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 26px 65px rgba(0, 0, 0, 0.78) !important;
+  }
+
+  .user-menu-btn,
+  .theme-toggle-btn {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.12);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.20);
+    }
+  }
+
+  .user-meta .user-name,
+  .user-meta .user-role {
+    color: #f1f1f7;
+  }
+
+  .user-meta .user-role {
+    opacity: 0.72;
   }
 }

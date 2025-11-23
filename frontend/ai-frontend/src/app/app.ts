@@ -1,5 +1,17 @@
-import { Component, signal, computed, inject, ViewChild } from '@angular/core';
-import { RouterOutlet, Router, NavigationEnd, RouterLink, RouterLinkActive } from '@angular/router';
+import {
+  Component,
+  signal,
+  computed,
+  inject,
+  ViewChild,
+} from '@angular/core';
+import {
+  RouterOutlet,
+  Router,
+  NavigationEnd,
+  RouterLink,
+  RouterLinkActive,
+} from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { MatSidenavModule, MatSidenav } from '@angular/material/sidenav';
@@ -7,6 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { filter } from 'rxjs/operators';
 import { AuthService } from './core/auth/auth.service';
@@ -23,10 +36,11 @@ import { AuthService } from './core/auth/auth.service';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule,
   ],
   templateUrl: './app.html',
-  styleUrls: ['./app.scss']
+  styleUrls: ['./app.scss'],
 })
 export class App {
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
@@ -34,14 +48,20 @@ export class App {
   private auth = inject(AuthService);
 
   isDark = signal(window.matchMedia('(prefers-color-scheme: dark)').matches);
-  isAuthenticated$ = computed(() => this.auth.isLoggedIn());
 
+  isAuthenticated$ = computed(() => this.auth.isLoggedIn());
+  currentUser = computed(() => this.auth.getUser());
+  userInitials = computed(() => {
+    const user = this.currentUser();
+    if (!user?.username) return '?';
+    return user.username.charAt(0).toUpperCase();
+  });
 
   constructor(private router: Router) {
     this.applyInitialTheme();
 
     this.router.events
-      .pipe(filter(e => e instanceof NavigationEnd))
+      .pipe(filter((e) => e instanceof NavigationEnd))
       .subscribe(() => {
         if (window.innerWidth < 960 && this.sidenav) {
           this.sidenav.close();
@@ -55,12 +75,15 @@ export class App {
   }
 
   toggleDarkMode() {
-    this.isDark.update(v => !v);
+    this.isDark.update((v) => !v);
     document.documentElement.classList.toggle('dark-mode', this.isDark());
   }
 
   logout() {
     this.auth.logout();
-    this.router.navigate(['/login']);
+  }
+
+  goToUserAdmin() {
+    this.router.navigate(['/users']);
   }
 }

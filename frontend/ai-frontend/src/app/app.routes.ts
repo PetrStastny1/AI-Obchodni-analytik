@@ -6,6 +6,7 @@ import { SalesDashboardComponent } from './features/sales-dashboard';
 import { SalesPage } from './features/sales-page/sales-page';
 import { ImportCsvComponent } from './features/import-csv/import-csv';
 import { AiChatComponent } from './features/ai-chat/ai-chat';
+import { UsersComponent } from './features/users/users';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
       { path: 'sales', component: SalesPage },
       { path: 'import', component: ImportCsvComponent },
       { path: 'ai-chat', component: AiChatComponent },
+      { path: 'users', component: UsersComponent },
 
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' }
     ],
