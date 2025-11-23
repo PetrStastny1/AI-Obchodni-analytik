@@ -1,320 +1,908 @@
-date,product,quantity,price
-2025-08-19,Don Papa Baroko,1,1090
-2025-08-19,Macallan Sherry Oak 12y,1,1890
-2025-08-19,A.H. Riise Non Plus Ultra,1,3490
-2025-08-19,Moët & Chandon Brut Imperial,1,1290
-2025-08-20,Yamazaki 12y,1,4490
-2025-08-20,Hendrick's Gin,2,899
-2025-08-20,Ardbeg 10y,1,1490
-2025-08-21,Dictador XO Insolent,1,3990
-2025-08-21,Gin Mare Mediterranean,1,1190
-2025-08-21,Lagavulin 16y,1,2490
-2025-08-22,Don Papa Baroko,2,1090
-2025-08-22,Champagne Bollinger Special Cuvée,1,1690
-2025-08-22,Caol Ila 12y,1,1490
-2025-08-23,Hennessy XO,1,5290
-2025-08-23,Macallan Sherry Oak 12y,2,1890
-2025-08-23,Dictador 20y,1,2690
-2025-08-23,A.H. Riise Non Plus Ultra,1,3490
-2025-08-24,Don Julio Reposado,1,1590
-2025-08-24,Champagne Moët & Chandon Rosé,1,1450
-2025-08-24,Glenfiddich 12y,2,1050
-2025-08-25,Ron Zacapa 23y,1,1390
-2025-08-25,Glenlivet 18y,1,2490
-2025-08-25,Tanqueray No. TEN,1,999
-2025-08-26,Armand de Brignac Brut Gold (Ace of Spades),1,8490
-2025-08-26,Ron Abuelo Centuria,1,4290
-2025-08-26,Macallan Rare Cask,1,6990
-2025-08-27,Jägermeister Manifest,1,1190
-2025-08-27,Chivas Regal 25y,1,5490
-2025-08-27,Hennessy XO,1,5290
-2025-08-28,Don Papa Masskara,2,1290
-2025-08-28,Dictador XO Perpetual,1,3890
-2025-08-28,Gin Mare Mediterranean,1,1190
-2025-08-29,Yamazaki 18y,1,10500
-2025-08-29,A.H. Riise Non Plus Ultra,1,3490
-2025-08-29,Beluga Gold Line,1,4990
-2025-08-30,Champagne Cristal Louis Roederer,1,8990
-2025-08-30,Laphroaig 10y,1,1390
-2025-08-30,Hendrick's Gin,1,899
-2025-08-31,Macallan Sherry Oak 12y,2,1890
-2025-08-31,Ron Zacapa 23y,1,1390
-2025-08-31,Glenlivet 12y,2,990
-2025-09-01,Glenlivet 18y,1,2490
-2025-09-01,Don Papa Baroko,1,1090
-2025-09-01,Beluga Transatlantic Racing,1,1590
-2025-09-02,Macallan Triple Cask 18y,1,5590
-2025-09-02,Champagne Veuve Clicquot Brut,1,1290
-2025-09-02,Hennessy VSOP,1,1790
-2025-09-02,Hendrick's Gin,2,899
-2025-09-03,Ron Zacapa XO,1,2990
-2025-09-03,Dictador 20y,1,2690
-2025-09-03,Laphroaig Quarter Cask,1,1490
-2025-09-03,Glenfiddich 12y,2,1050
-2025-09-04,Yamazaki 12y,1,4490
-2025-09-04,Ardbeg Uigeadail,1,2490
-2025-09-04,Gin Mare Mediterranean,1,1190
-2025-09-04,A.H. Riise Non Plus Ultra,1,3490
-2025-09-05,Macallan Sherry Oak 18y,1,8990
-2025-09-05,Don Papa Masskara,1,1290
-2025-09-05,Hennessy XO,1,5290
-2025-09-05,Beluga Gold Line,1,4990
-2025-09-06,Ron Abuelo Centuria,1,4290
-2025-09-06,Champagne Taittinger Brut Reserve,1,1090
-2025-09-06,Caol Ila 12y,1,1490
-2025-09-06,Tanqueray No. TEN,1,999
-2025-09-07,Ron Zacapa 23y,1,1390
-2025-09-07,Macallan Rare Cask,1,6990
-2025-09-07,Glenmorangie Signet,1,4990
-2025-09-07,Hendrick's Gin,1,899
-2025-09-08,Lagavulin 16y,1,2490
-2025-09-08,Don Julio Reposado,1,1590
-2025-09-08,Champagne Bollinger Special Cuvée,1,1690
-2025-09-08,Dictador XO Insolent,1,3990
-2025-09-09,A.H. Riise Non Plus Ultra,1,3490
-2025-09-09,Armand de Brignac Brut Gold (Ace of Spades),1,8490
-2025-09-09,Hennessy XO,1,5290
-2025-09-09,Glenlivet 15y,1,1790
-2025-09-10,Yamazaki 18y,1,10500
-2025-09-10,Macallan Sherry Oak 12y,1,1890
-2025-09-10,Don Papa Baroko,2,1090
-2025-09-10,Champagne Moët & Chandon Rosé,1,1450
-2025-09-11,Ron Zacapa XO,1,2990
-2025-09-11,Gin Mare Mediterranean,1,1190
-2025-09-11,Hennessy VSOP,1,1790
-2025-09-11,Laphroaig 10y,1,1390
-2025-09-12,Macallan Rare Cask,1,6990
-2025-09-12,Beluga Transatlantic Racing,1,1590
-2025-09-12,A.H. Riise Non Plus Ultra,1,3490
-2025-09-12,Don Papa Masskara,1,1290
-2025-09-13,Ron Abuelo Centuria,1,4290
-2025-09-13,Champagne Cristal Louis Roederer,1,8990
-2025-09-13,Ardbeg 10y,1,1490
-2025-09-13,Glenfiddich 21y Reserva,1,5490
-2025-09-14,Macallan Sherry Oak 18y,1,8990
-2025-09-14,Don Julio Blanco,1,1390
-2025-09-14,Champagne Veuve Clicquot Brut,1,1290
-2025-09-14,Hendrick's Gin,1,899
-2025-09-15,Ron Zacapa 23y,1,1390
-2025-09-15,Ardbeg Uigeadail,1,2490
-2025-09-15,Macallan Triple Cask 12y,1,1890
-2025-09-15,Beluga Noble,1,1090
-2025-09-16,Hennessy XO,1,5290
-2025-09-16,Glenlivet 18y,1,2490
-2025-09-16,Don Papa Baroko,1,1090
-2025-09-16,Caol Ila 25y,1,7290
-2025-09-17,Yamazaki 12y,1,4490
-2025-09-17,Dictador XO Insolent,1,3990
-2025-09-17,Gin Mare Mediterranean,1,1190
-2025-09-17,Macallan Rare Cask,1,6990
-2025-09-18,Ron Abuelo Centuria,1,4290
-2025-09-18,Champagne Krug Grande Cuvée,1,8490
-2025-09-18,Glenfiddich 21y Reserva,1,5490
-2025-09-18,Don Papa Masskara,2,1290
-2025-09-19,Macallan Sherry Oak 12y,1,1890
-2025-09-19,Don Julio Reposado,1,1590
-2025-09-19,Hennessy VSOP,2,1790
-2025-09-19,Beluga Gold Line,1,4990
-2025-09-20,Ron Zacapa XO,1,2990
-2025-09-20,Laphroaig Quarter Cask,1,1490
-2025-09-20,Gin Hendrick's Neptunia,1,1050
-2025-09-20,Champagne Dom Pérignon Vintage,1,6490
-2025-09-21,Yamazaki 18y,1,10500
-2025-09-21,Glenlivet 15y,1,1790
-2025-09-21,Ardbeg 10y,1,1490
-2025-09-21,Don Papa Baroko,1,1090
-2025-09-22,Hennessy XO,1,5290
-2025-09-22,Macallan Triple Cask 18y,1,5590
-2025-09-22,Dictador 20y,1,2690
-2025-09-22,Champagne Moët & Chandon Brut,1,1190
-2025-09-23,Ron Zacapa 23y,1,1390
-2025-09-23,Beluga Transatlantic Racing,1,1590
-2025-09-23,A.H. Riise Non Plus Ultra,1,3490
-2025-09-23,Glenfiddich 12y,2,1050
-2025-09-24,Yamazaki 12y,1,4490
-2025-09-24,Don Julio Añejo,1,1890
-2025-09-24,Champagne Bollinger Special Cuvée,1,1690
-2025-09-24,Gin Mare Mediterranean,1,1190
-2025-09-25,Macallan Rare Cask,1,6990
-2025-09-25,Ron Abuelo Centuria,1,4290
-2025-09-25,Lagavulin 16y,1,2490
-2025-09-25,Hendrick's Gin,1,899
-2025-09-26,Champagne Cristal Louis Roederer,1,8990
-2025-09-26,Ardbeg Uigeadail,1,2490
-2025-09-26,Glenlivet 18y,1,2490
-2025-09-26,Don Papa Masskara,1,1290
-2025-09-27,Hennessy XO,1,5290
-2025-09-27,Ron Zacapa XO,1,2990
-2025-09-27,Gin Hendrick's Orbium,1,1050
-2025-09-27,Macallan Sherry Oak 12y,1,1890
-2025-09-28,Yamazaki 18y,1,10500
-2025-09-28,Glenfiddich 21y Reserva,1,5490
-2025-09-28,Casa Dragones Blanco,1,3490
-2025-09-28,Don Papa Baroko,1,1090
-2025-09-29,Armand de Brignac Brut Gold (Ace of Spades),1,8490
-2025-09-29,Hennessy VSOP,1,1790
-2025-09-29,Glenlivet 15y,1,1790
-2025-09-29,Champagne Moët Ice Impérial,1,1590
-2025-09-30,Ron Zacapa 23y,1,1390
-2025-09-30,Laphroaig 10y,1,1390
-2025-09-30,Beluga Noble,1,1090
-2025-09-30,Don Julio Reposado,1,1590
-2025-10-01,Macallan Sherry Oak 12y,1,1890
-2025-10-01,Hendrick's Gin,1,899
-2025-10-01,Ron Zacapa XO,1,2990
-2025-10-01,Dom Pérignon Rosé Vintage,1,8990
-2025-10-02,Yamazaki 12y,1,4490
-2025-10-02,Dictador XO Insolent,1,3990
-2025-10-02,Laphroaig Quarter Cask,1,1490
-2025-10-02,Beluga Noble,1,1090
-2025-10-03,Hennessy XO,1,5290
-2025-10-03,Macallan Rare Cask,1,6990
-2025-10-03,Don Papa Baroko,1,1090
-2025-10-03,Glenlivet 15y,1,1790
-2025-10-04,Ron Abuelo Centuria,1,4290
-2025-10-04,Champagne Krug Grande Cuvée,1,8490
-2025-10-04,Glenfiddich 21y Reserva,1,5490
-2025-10-04,Gin Mare Mediterranean,1,1190
-2025-10-05,Ardbeg 10y,1,1490
-2025-10-05,Champagne Moët & Chandon Brut,1,1190
-2025-10-05,Don Julio Blanco,1,1390
-2025-10-05,Hennessy VSOP,1,1790
-2025-10-06,Yamazaki 18y,1,10500
-2025-10-06,Macallan Triple Cask 18y,1,5590
-2025-10-06,Dictador 20y,1,2690
-2025-10-06,Don Papa Masskara,1,1290
-2025-10-07,Ron Zacapa 23y,1,1390
-2025-10-07,Lagavulin 16y,1,2490
-2025-10-07,Gin Hendrick's Neptunia,1,1050
-2025-10-07,Champagne Veuve Clicquot Brut,1,1290
-2025-10-08,Hennessy XO,1,5290
-2025-10-08,Yamazaki 12y,1,4490
-2025-10-08,Beluga Gold Line,1,4990
-2025-10-08,Macallan Sherry Oak 12y,1,1890
-2025-10-09,Don Julio Añejo,1,1890
-2025-10-09,Dictador XO Perpetual,1,3890
-2025-10-09,Ron Zacapa XO,1,2990
-2025-10-09,Champagne Bollinger Special Cuvée,1,1690
-2025-10-10,Armand de Brignac Brut Gold (Ace of Spades),1,8490
-2025-10-10,Glenlivet 18y,1,2490
-2025-10-10,Don Papa Baroko,2,1090
-2025-10-10,Hendrick's Gin,1,899
-2025-10-11,Ron Abuelo Centuria,1,4290
-2025-10-11,Macallan Rare Cask,1,6990
-2025-10-11,Champagne Cristal Louis Roederer,1,8990
-2025-10-11,Don Julio Reposado,1,1590
-2025-10-12,Hennessy VS,2,1090
-2025-10-12,Ardbeg Uigeadail,1,2490
-2025-10-12,Macallan Triple Cask 12y,1,1890
-2025-10-12,Ron Zacapa 23y,1,1390
-2025-10-13,Glenfiddich 18y,1,2790
-2025-10-13,Casa Dragones Blanco,1,3490
-2025-10-13,Gin Mare Mediterranean,1,1190
-2025-10-13,Dom Pérignon Vintage,1,6490
-2025-10-14,Yamazaki 12y,1,4490
-2025-10-14,Hennessy XO,1,5290
-2025-10-14,Macallan Sherry Oak 12y,1,1890
-2025-10-14,Don Papa Masskara,1,1290
-2025-10-15,Ron Zacapa XO,1,2990
-2025-10-15,Glenlivet 15y,1,1790
-2025-10-15,Laphroaig 10y,1,1390
-2025-10-15,Champagne Moët Ice Impérial,1,1590
-2025-10-18,Hennessy XO,1,5290
-2025-10-18,Macallan Double Cask 15y,1,3190
-2025-10-18,Johnnie Walker Blue Label,1,4490
-2025-10-19,Don Papa Baroko,3,1090
-2025-10-19,Hendrick's Gin,2,899
-2025-10-19,Caol Ila 12y,1,1490
-2025-10-20,Yamazaki 12y,1,4490
-2025-10-20,A.H. Riise Non Plus Ultra,1,3490
-2025-10-20,Ron Zacapa XO,1,2990
-2025-10-21,Don Julio Reposado,2,1590
-2025-10-21,Teeling Single Malt,1,1390
-2025-10-21,Tanqueray No. TEN,3,999
-2025-10-22,Brugal 1888,2,1190
-2025-10-22,Casa Dragones Blanco,1,3490
-2025-10-22,Kavalan Solist Sherry,1,4690
-2025-10-23,Glenlivet 18y,1,2490
-2025-10-23,Dictador XO Insolent,1,3990
-2025-10-23,Macallan Sherry Oak 12y,2,1890
-2025-10-24,Laphroaig Quarter Cask,2,1490
-2025-10-24,Ardbeg Uigeadail,1,2690
-2025-10-24,Hennessy New Year's Edition,1,6190
-2025-10-25,Jack Daniel's Sinatra Select,1,4590
-2025-10-25,Gin Mare Mediterranean,2,1190
-2025-10-25,Michter's Bourbon US*1,1,2390
-2025-10-26,Chivas Regal 25y,1,5490
-2025-10-26,Johnnie Walker Green Label,2,1290
-2025-10-26,Beluga Gold Line Vodka,1,4990
-2025-10-27,Glenfiddich 21y Gran Reserva,1,6890
-2025-10-27,Ron Abuelo Centuria,1,4290
-2025-10-27,Hendrick's Flora Adora,2,899
-2025-10-28,Clase Azul Reposado,1,8990
-2025-10-28,Don Papa Port Cask,1,1590
-2025-10-28,Glenlivet 12y,3,990
-2025-10-29,Macallan Folio Series 7,1,12990
-2025-10-29,Ron Diplomático Single Vintage,1,3490
-2025-10-29,Mezcal Del Maguey Chichicapa,1,1890
-2025-10-30,Veuve Clicquot La Grande Dame,1,4990
-2025-10-30,Belvedere Single Estate Rye,1,1290
-2025-10-30,Don Julio 1942,1,5990
-2025-10-31,Armand de Brignac Brut Gold (Ace of Spades),1,8490
-2025-10-31,Clase Azul Plata,1,3490
-2025-10-31,Nikka From the Barrel,2,1390
-2025-11-01,Ron Zacapa XO,1,2990
-2025-11-01,Teeling Single Malt,2,1390
-2025-11-01,Tanqueray No. TEN,1,999
-2025-11-02,Macallan Sherry Oak 12y,2,1890
-2025-11-02,Johnnie Walker Blue Label,1,4490
-2025-11-02,Don Julio Reposado,2,1590
-2025-11-03,Dom Pérignon Vintage,1,5890
-2025-11-03,Brugal 1888,3,1190
-2025-11-03,Hendrick's Gin,2,899
-2025-11-04,Chivas Regal 25y,1,5490
-2025-11-04,A.H. Riise Non Plus Ultra,1,3490
-2025-11-04,Don Papa Baroko,3,1090
-2025-11-05,Glenlivet 18y,1,2490
-2025-11-05,Clase Azul Plata,1,3490
-2025-11-05,Michter's Rye US*1,2,2290
-2025-11-06,Beluga Gold Line Vodka,1,4990
-2025-11-06,Dictador XO Insolent,1,3990
-2025-11-06,Caol Ila 12y,2,1490
-2025-11-07,Armand de Brignac Brut Gold (Ace of Spades),1,8490
-2025-11-07,Don Papa Port Cask,2,1590
-2025-11-07,Ron Diplomático Reserva Exclusiva,3,1290
-2025-11-08,Hennessy XO,1,5290
-2025-11-08,Kavalan Solist Sherry,1,4690
-2025-11-08,Belvedere Single Estate Rye,2,1290
-2025-11-09,Macallan Double Cask 15y,1,3190
-2025-11-09,Tequila Patron Añejo,1,1890
-2025-11-09,Glenlivet 12y,3,990
-2025-11-10,Yamazaki 12y,1,4490
-2025-11-10,Dictador 20y,1,2690
-2025-11-10,Don Julio 1942,1,5990
-2025-11-11,Ruinart Blanc de Blancs,1,3290
-2025-11-11,Ardbeg Uigeadail,1,2690
-2025-11-11,Teeling Blackpitts Peated,1,1690
-2025-11-12,Brugal 1888,3,1190
-2025-11-12,Don Papa Masskara,2,1290
-2025-11-12,Hendrick's Flora Adora,2,899
-2025-11-13,Clase Azul Reposado,1,8990
-2025-11-13,Macallan Triple Cask 18y,1,7290
-2025-11-13,Veuve Clicquot Brut,2,1290
-2025-11-14,Glenfiddich 21y Gran Reserva,1,6890
-2025-11-14,Ron Abuelo Centuria,1,4290
-2025-11-14,Johnnie Walker Green Label,2,1290
-2025-11-15,Nikka From the Barrel,2,1390
-2025-11-15,Teeling Single Grain,2,1190
-2025-11-15,Gin Mare Mediterranean,1,1190
-2025-11-16,Don Papa Port Cask,3,1590
-2025-11-16,Laphroaig Quarter Cask,2,1490
-2025-11-16,Ruinart Rosé,1,3490
-2025-11-17,Armand de Brignac Brut Rose,1,11990
-2025-11-17,A.H. Riise Non Plus Ultra Black Edition,1,3890
-2025-11-17,Dictador XO Perpetual,1,4190
-2025-11-18,Macallan Rare Cask,1,8990
-2025-11-18,Clase Azul Plata,2,3490
-2025-11-18,Brugal 1888,3,1190
-2025-11-19,Glenlivet 21y Archive,1,4990
-2025-11-19,Dom Pérignon Vintage,1,5890
-2025-11-19,Don Julio Añejo,1,1890
+date,category,product,quantity,purchase_price,price,margin,customer_id,customer_type
+2025-01-01,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-01,Rum,Don Papa Baroko,1,740.00,1090.00,350.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-01,Champagne,Moët & Chandon Brut Imperial,1,880.00,1290.00,410.00,b7afaba4-3fcc-4c8e-8ba7-532f87395084,REGULAR
+2025-01-01,Wine (France),Château Margaux Premier Grand Cru,1,3950.00,6250.00,2300.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-02,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-02,Rum,Dictador 20y,1,1750.00,2690.00,940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-02,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-02,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-01-03,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-03,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-03,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-03,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-03,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-01-04,Whisky,Ardbeg 10y,1,980.00,1490.00,510.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-04,Rum,Don Papa Masskara,2,860.00,1290.00,430.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-01-04,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-04,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-05,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-05,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-05,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-01-05,Wine (France),Châteauneuf-du-Pape Château de Beaucastel,1,1250.00,1990.00,740.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-01-06,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-06,Rum,Don Papa Baroko,2,740.00,1090.00,350.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-01-06,Wine (Spain),La Rioja Alta Gran Reserva 904,1,1780.00,2890.00,1110.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-06,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-01-07,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-07,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-07,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-07,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-01-08,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-08,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-08,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-08,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-01-08,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-01-09,Whisky,Ardbeg 10y,2,980.00,1490.00,510.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-01-09,Rum,Don Papa Masskara,1,860.00,1290.00,430.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-09,Champagne,Moët & Chandon Rosé,1,1020.00,1450.00,430.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-09,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-10,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-10,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-10,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-10,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-01-10,Wine (France),Pétrus Pomerol (by glass bottle share),1,8800.00,12990.00,4190.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-16,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-16,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-16,Wine (Italy),Brunello Ciacci Piccolomini,1,1550.00,2690.00,1140.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-16,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-01-16,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-01-17,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-17,Rum,Don Papa Masskara,1,860.00,1290.00,430.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-17,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-17,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-18,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-18,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-18,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-18,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-01-19,Whisky,Ardbeg 10y,2,980.00,1490.00,510.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-19,Rum,Don Papa Baroko,1,740.00,1090.00,350.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-01-19,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-19,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-01-20,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-01-20,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-20,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-20,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-20,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-01-21,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-21,Rum,Dictador 20y,1,1750.00,2690.00,940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-21,Wine (France),Châteauneuf-du-Pape Beaucastel,1,1250.00,1990.00,740.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-21,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-22,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-22,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-22,Wine (Spain),Valduero Gran Reserva,1,2650.00,4290.00,1640.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-01-22,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-01-23,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-23,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-23,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-23,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-01-24,Whisky,Ardbeg Uigeadail,1,2350.00,3490.00,1140.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-24,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-24,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-24,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-01-25,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-01-25,Rum,Don Papa Baroko,2,740.00,1090.00,350.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-25,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-25,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-01-26,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-01-26,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-26,Rum,Dictador 20y,1,1750.00,2690.00,940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-26,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-26,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-01-27,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-27,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-27,Wine (Italy),Brunello di Montalcino Biondi-Santi,1,2250.00,3490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-27,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-28,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-01-28,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-28,Wine (France),Meursault Premier Cru,1,1680.00,2590.00,910.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-28,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-01-29,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-01-29,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-29,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-29,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-01-30,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-01-30,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-30,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-30,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-01-31,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-01-31,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-01-31,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-01-31,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-02-01,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-01,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-01,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-01,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-02-02,Whisky,Laphroaig 10y,2,890.00,1390.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-02,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-02,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-02,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-02-03,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-03,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-03,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-03,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-02-03,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-02-04,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-04,Whisky,Ardbeg Uigeadail,1,2350.00,3490.00,1140.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-04,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-04,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-02-05,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-05,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-05,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-05,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-05,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-02-06,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-06,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-06,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-06,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-02-07,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-07,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-07,Wine (France),Corton-Charlemagne Grand Cru,1,1980.00,3290.00,1310.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-02-07,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-07,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-02-08,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-08,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-08,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-08,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-02-09,Whisky,Ardbeg 10y,1,980.00,1490.00,510.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-09,Rum,Don Papa Masskara,1,860.00,1290.00,430.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-09,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-02-09,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-02-10,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-10,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-10,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-10,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-02-11,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-11,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-11,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-11,Wine (Italy),Brunello Ciacci Piccolomini,1,1550.00,2690.00,1140.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-11,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-02-12,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-12,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-12,Rum,Don Papa Baroko,1,740.00,1090.00,350.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-12,Wine (France),Château Margaux Premier Grand Cru,1,3950.00,6250.00,2300.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-02-13,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-13,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-13,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-02-13,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-02-14,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-14,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-14,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-14,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-14,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-02-15,Whisky,Ardbeg Uigeadail,1,2350.00,3490.00,1140.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-15,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-15,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-15,Wine (France),Meursault Premier Cru,1,1680.00,2590.00,910.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-02-16,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-16,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-16,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-16,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-02-17,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-02-17,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-17,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-17,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-02-18,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-18,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-18,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-18,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-18,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-02-19,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-19,Whisky,Ardbeg Uigeadail,1,2350.00,3490.00,1140.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-19,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-19,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-02-20,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-20,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-20,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-20,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-02-21,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-02-21,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-21,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-21,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-21,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-02-22,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-22,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-22,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-22,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-02-23,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-02-23,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-23,Rum,Don Papa Masskara,2,860.00,1290.00,430.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-23,Wine (Italy),Brunello Ciacci Piccolomini,1,1550.00,2690.00,1140.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-23,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-02-24,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-24,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-24,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-24,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-02-25,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-25,Whisky,Ardbeg Uigeadail,1,2350.00,3490.00,1140.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-02-25,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-25,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-02-26,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-26,Rum,Dictador 20y,1,1750.00,2690.00,940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-26,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-26,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-02-27,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-27,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-02-27,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-02-27,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-02-28,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-02-28,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-02-28,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-02-28,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-01,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-01,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-01,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-01,Wine (France),Château Margaux Premier Grand Cru,1,3950.00,6250.00,2300.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-02,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-02,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-02,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-02,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-03-03,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-03,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-03,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-03,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-03,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-03-04,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-04,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-04,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-04,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-03-05,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-05,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-05,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-05,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-06,Whisky,Ardbeg 10y,1,980.00,1490.00,510.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-06,Rum,Dictador 20y,1,1750.00,2690.00,940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-06,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-06,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-03-07,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-07,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-07,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-07,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-07,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-03-08,Whisky,Laphroaig 10y,2,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-08,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-08,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-08,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-09,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-09,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-09,Rum,Don Papa Baroko,2,740.00,1090.00,350.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-09,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-03-10,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-10,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-10,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-10,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-03-11,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-11,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-11,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-11,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP```
+
+2025-03-12,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-12,Rum,Dictador 20y,1,1750.00,2690.00,940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-12,Wine (Italy),Brunello di Montalcino Biondi-Santi,1,2250.00,3490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-12,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-12,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-03-13,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-13,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-13,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-13,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-13,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-14,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-14,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-14,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-14,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-03-15,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-15,Rum,Don Papa Masskara,2,860.00,1290.00,430.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-15,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-15,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-03-16,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-16,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-16,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-16,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-03-17,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-17,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-17,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-17,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-03-18,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-18,Rum,Dictador 20y,1,1750.00,2690.00,940.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-18,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-18,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-19,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-19,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-19,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-19,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-19,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-20,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-20,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-20,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-20,Wine (France),Meursault Premier Cru,1,1680.00,2590.00,910.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-03-21,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-21,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-21,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-21,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-22,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-22,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-22,Wine (Italy),Brunello di Montalcino Biondi-Santi,1,2250.00,3490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-22,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+
+2025-03-23,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-23,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-23,Rum,Don Papa Masskara,1,860.00,1290.00,430.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-23,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-03-24,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-24,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-24,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-24,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-25,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-25,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-25,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-25,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-25,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-26,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-26,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-26,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-26,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-27,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-27,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-27,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-27,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-03-28,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-03-28,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-28,Rum,Dictador 20y,1,1750.00,2690.00,940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-28,Wine (Italy),Brunello di Montalcino Biondi-Santi,1,2250.00,3490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-28,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-03-29,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-03-29,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-03-29,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-29,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-03-30,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-03-30,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-30,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-30,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-03-31,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-03-31,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-03-31,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-03-31,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-04-01,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-01,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-01,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-04-01,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-04-02,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-02,Rum,Dictador 20y,1,1750.00,2690.00,940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-02,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-02,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-04-03,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-03,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-03,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-04-03,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-04-04,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-04-04,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-04,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-04,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-04-05,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-05,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-05,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-05,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-06,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-06,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-06,Rum,Don Papa Masskara,2,860.00,1290.00,430.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-06,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-07,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-07,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-07,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-07,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-04-08,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-08,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-08,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-08,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-09,Gin,Hendrick's Gin,1,540.00,899.00,359.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-09,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-09,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-09,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-04-10,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-10,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-10,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-10,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-11,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-11,Rum,Don Papa Baroko,2,740.00,1090.00,350.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-11,Wine (France),Meursault Premier Cru,1,1680.00,2590.00,910.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-11,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-04-12,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-12,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-12,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-12,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-13,Whisky,Ardbeg Uigeadail,1,2350.00,3490.00,1140.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-13,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-13,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-13,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-14,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-14,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-14,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-14,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-04-15,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-15,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-15,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-15,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-04-16,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-04-16,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-16,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-16,Wine (France),Corton-Charlemagne Grand Cru,1,1980.00,3290.00,1310.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-04-17,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,bd84576c-8771-4a77-a7e1-0d3fc976e12d,REGULAR
+2025-04-17,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-17,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-17,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-18,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-18,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-18,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-18,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-19,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-19,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-19,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-19,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-20,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-20,Rum,Don Papa Masskara,2,860.00,1290.00,430.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-20,Wine (Italy),Brunello di Montalcino Biondi-Santi,1,2250.00,3490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-20,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-21,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-21,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-21,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-21,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-04-22,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-04-22,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-22,Wine (France),Corton-Charlemagne Grand Cru,1,1980.00,3290.00,1310.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-22,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-04-23,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-23,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-23,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-23,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-23,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-04-24,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-04-24,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-24,Rum,Dictador 20y,1,1750.00,2690.00,940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-24,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-04-25,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-25,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-25,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-25,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-26,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-04-26,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-26,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-26,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-04-27,Gin,Hendrick's Gin,1,540.00,899.00,359.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-27,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-27,Rum,Don Papa Masskara,1,860.00,1290.00,430.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-27,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-28,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-28,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-28,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-04-28,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-04-29,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-04-29,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-29,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-29,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-04-30,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-04-30,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-04-30,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-04-30,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-01,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-01,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-01,Champagne,Veuve Clicquot Rosé,1,1150.00,1690.00,540.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-01,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-05-02,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-02,Rum,Don Papa Masskara,2,860.00,1290.00,430.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-02,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-02,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-03,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-03,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-03,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-03,Wine (France),Corton-Charlemagne Grand Cru,1,1980.00,3290.00,1310.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-03,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-04,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-04,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-04,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-04,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-05-05,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-05,Rum,Dictador 20y,1,1750.00,2690.00,940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-05,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-05,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-06,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-06,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-06,Rum,Don Papa Masskara,1,860.00,1290.00,430.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-06,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-07,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-07,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-07,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-07,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+
+2025-05-08,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-08,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-08,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-08,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-09,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-09,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-09,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-09,Wine (France),Meursault Premier Cru,1,1680.00,2590.00,910.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-05-10,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-10,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-10,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-10,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-05-11,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-11,Rum,Don Papa Baroko,1,740.00,1090.00,350.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-11,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-11,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-12,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-12,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-12,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-12,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-05-13,Whisky,Ardbeg Uigeadail,1,2350.00,3490.00,1140.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-13,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-13,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-13,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-14,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-14,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-14,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-14,Wine (France),Meursault Premier Cru,1,1680.00,2590.00,910.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-05-15,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-05-15,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-15,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-15,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-05-16,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-16,Rum,Dictador 20y,1,1750.00,2690.00,940.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-16,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-16,Champagne,Perrier-Jouët Belle Epoque,1,4850.00,7490.00,2640.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-17,Gin,Hendrick's Gin,1,540.00,899.00,359.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-17,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-17,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-17,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-05-18,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-05-18,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-18,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-18,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-05-19,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-19,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-19,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-19,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-20,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-20,Whisky,Glenlivet 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-20,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-20,Wine (France),Corton-Charlemagne Grand Cru,1,1980.00,3290.00,1310.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-05-21,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-21,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-21,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-21,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-05-22,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-22,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-22,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-22,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-23,Gin,Hendrick's Gin,1,540.00,899.00,359.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-23,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-23,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-23,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-05-24,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-05-24,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-24,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-24,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-05-25,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-25,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-25,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-25,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-26,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-26,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-26,Rum,Dictador 20y,1,1750.00,2690.00,940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-26,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-05-27,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-27,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-27,Wine (Spain),Vega Sicilia Valbuena 5°,1,3620.00,5480.00,1860.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-27,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-28,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-28,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-28,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-28,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-05-29,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-29,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-05-29,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-29,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-05-30,Gin,Hendrick's Gin,1,540.00,899.00,359.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-30,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-30,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-30,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-05-30,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-05-31,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-05-31,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-05-31,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-05-31,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-05-31,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-01,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-01,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-01,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-01,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-02,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-02,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-02,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-02,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-03,Gin,Gin Mare Mediterranean,1,690.00,1190.00,500.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-03,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-03,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-03,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-06-04,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-06-04,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-04,Wine (France),Corton-Charlemagne Grand Cru,1,1980.00,3290.00,1310.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-04,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-06-05,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-05,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-05,Rum,Don Papa Masskara,2,860.00,1290.00,430.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-05,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-06-06,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-06,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-06,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-06,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-07,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-07,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-07,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-07,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-06-08,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-06-08,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-08,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-08,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-06-09,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-09,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-09,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-09,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-10,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-10,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-10,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-10,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-06-11,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-11,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-11,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-11,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-06-12,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-06-12,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-12,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-12,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-06-13,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-13,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-13,Wine (France),Château Palmer Margaux,1,3180.00,4890.00,1710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-13,Champagne,Bollinger Special Cuvée,1,1190.00,1690.00,500.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-06-14,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-14,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-14,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-14,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-06-15,Whisky,Laphroaig 10y,1,890.00,1390.00,500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-15,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-15,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-15,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-16,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-16,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-16,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-16,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+
+2025-06-17,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,5cd83377-0bbc-48e9-ac86-a928281d203д,VIP
+2025-06-17,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-17,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-17,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-06-18,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-18,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-18,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-18,Wine (France),Corton-Charlemagne Grand Cru,1,1980.00,3290.00,1310.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-06-19,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-19,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-19,Wine (Spain),Pingus PSI,1,1520.00,2590.00,1070.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-19,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-20,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-06-20,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,bd24576c-8771-4a77-a7e1-0d3fc976e12д,PREMIUM
+2025-06-20,Rum,Dictador 20y,1,1750.00,2690.00,940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-20,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,README truncated...
+
+2025-06-20,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-20,Champagne,Veuve Clicquot Yellow Label,1,990.00,1390.00,400.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-06-21,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-21,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-21,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-21,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-06-22,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-06-22,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-22,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-22,Wine (Italy),Sassicaia Tenuta San Guido,1,3850.00,6750.00,2900.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-06-23,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-23,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-23,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-23,Champagne,Dom Pérignon Vintage,1,4950.00,7890.00,2940.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-24,Gin,Tanqueray No. TEN,1,650.00,999.00,349.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-24,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-24,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-24,Wine (Spain),Ribera del Duero Aalto,1,1750.00,2950.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+
+2025-06-25,Whisky,Yamazaki 18y,1,7550.00,10500.00,2950.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-25,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-25,Wine (Italy),Barolo Giacomo Conterno,1,2580.00,4450.00,1870.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+2025-06-25,Champagne,Krug Grande Cuvée,1,5250.00,7990.00,2740.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-26,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+2025-06-26,Whisky,Macallan Sherry Oak 12y,1,1280.00,1890.00,610.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-26,Rum,Dictador 20y,1,1750.00,2690.00,940.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-26,Wine (France),Château Latour Grand Cru,1,3920.00,5990.00,2070.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+
+2025-06-27,Whisky,Lagavulin 16y,1,1640.00,2490.00,850.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-27,Rum,Ron Abuelo Centuria,1,3090.00,4290.00,1200.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-27,Wine (Italy),Tignanello Antinori,1,2850.00,4350.00,1500.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-27,Champagne,Dom Pérignon Rosé,1,6980.00,10490.00,3510.00,5cd83377-0bbc-48e9-ac86-a928281d203d,VIP
+
+2025-06-28,Gin,Hendrick's Gin,1,540.00,899.00,359.00,ee9c0b8a-d9c7-4fa8-8e49-7ef87d62d96e,REGULAR
+2025-06-28,Whisky,Yamazaki 12y,1,3250.00,4490.00,1240.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-28,Rum,Dictador XO Insolent,1,2840.00,3990.00,1150.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-28,Wine (Spain),Priorat Clos Mogador,1,2680.00,4290.00,1610.00,1cbdce9e-2b81-4713-8ab8-556eda3c94bb,PREMIUM
+
+2025-06-29,Whisky,Macallan Rare Cask,1,5050.00,6990.00,1940.00,f8f21737-bb45-492a-aa04-d7e91e493c85,PREMIUM
+2025-06-29,Rum,Ron Zacapa 23y,1,950.00,1390.00,440.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-29,Wine (France),Clos de Vougeot Grand Cru,1,2280.00,3690.00,1410.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
+2025-06-29,Champagne,Krug Rosé,1,5950.00,8990.00,3040.00,5cd83377-0bbc-48e9-ac86-a928281d203д,VIP
+
+2025-06-30,Cognac,Hennessy XO,1,3580.00,5290.00,1710.00,5cd83377-0bbc-48e9-ac86-a928281d203д,VIP
+2025-06-30,Whisky,Glenfiddich 18y,1,1780.00,2490.00,710.00,88e09f43-b36e-425c-b36f-d0f88b43c4cc,REGULAR
+2025-06-30,Rum,Dictador XO Perpetual,1,2720.00,3890.00,1170.00,bd24576c-8771-4a77-a7e1-0d3fc976e12d,PREMIUM
+2025-06-30,Wine (Italy),Barolo Ceretto,1,1450.00,2390.00,940.00,636f41fd-c21e-4eb8-8b9d-b72a43c35666,REGULAR
