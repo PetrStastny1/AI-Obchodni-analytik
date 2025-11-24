@@ -1,7 +1,0 @@
-{
-  "files": [],
-  "references": [
-    { "path": "frontend/ai-frontend" },
-    { "path": "backend" }
-  ]
-}
