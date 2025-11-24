@@ -14,14 +14,20 @@ import { MatTableModule } from '@angular/material/table';
 export class SalesTable {
   private apollo = inject(Apollo);
 
-  displayedColumns = ['date', 'product', 'quantity', 'price'];
+  displayedColumns = ['date', 'product', 'quantity', 'sale_price', 'revenue'];
   dataSource: any[] = [];
 
   isMobile = signal(window.innerWidth < 768);
 
   constructor() {
     this.apollo.watchQuery({ query: GET_SALES }).valueChanges.subscribe((res: any) => {
-      this.dataSource = res?.data?.sales ?? [];
+      const sales = res?.data?.sales ?? [];
+
+      this.dataSource = sales.map((s: any) => ({
+        ...s,
+        sale_price: Number(s.sale_price),
+        revenue: Number(s.quantity) * Number(s.sale_price),
+      }));
     });
 
     window.addEventListener('resize', () => {

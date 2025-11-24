@@ -7,7 +7,7 @@ export const GET_SALES = gql`
       date
       product
       quantity
-      price
+      sale_price
     }
   }
 `;

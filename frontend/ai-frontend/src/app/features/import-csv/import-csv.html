@@ -4,8 +4,16 @@
   <div class="upload-row">
     <div class="left-side">
 
-      <label class="glass-btn file-select">
-        <input type="file" accept=".csv" (change)="selectFile($event)" hidden />
+      <input
+        id="fileInput"
+        name="file"
+        type="file"
+        accept=".csv"
+        (change)="selectFile($event)"
+        hidden
+      />
+
+      <label class="glass-btn file-select" for="fileInput">
         <mat-icon>attach_file</mat-icon>
         <span>Vybrat soubor</span>
       </label>

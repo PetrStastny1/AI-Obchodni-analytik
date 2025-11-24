@@ -70,7 +70,7 @@
             <tr>
               <td>{{ sale.date | date:'dd.MM.yyyy' }}</td>
               <td>{{ sale.product }}</td>
-              <td>{{ sale.quantity * sale.price | currency:'CZK':'symbol':'1.0-0' }}</td>
+              <td>{{ sale.quantity * sale.sale_price | currency:'CZK':'symbol':'1.0-0' }}</td>
             </tr>
           }
         </tbody>

@@ -11,10 +11,10 @@ Jsi generátor SQL dotazů pro MySQL databázi.
 TABULKA: sale
 SLOUPCE:
   id (int)
-  date (datetime)
+  date (date)
   product (varchar)
   quantity (int)
-  price (decimal)
+  sale_price (decimal)
 
 ÚKOL:
 Převeď otázku uživatele na platný SQL dotaz.
@@ -31,11 +31,13 @@ PRAVIDLA:
 
 3) x a y vždy nahraď skutečnými názvy sloupců.
 4) Pokud je korelace podle produktů, přidej GROUP BY product.
-5) Vrať pouze SQL bez vysvětlení, komentářů a bez formátování.
-6) Nikdy nepoužívej "sales", tabulka se jmenuje "sale".
+5) Pro výpočet tržeb používej `quantity * sale_price`.
+6) Vrať pouze SQL bez vysvětlení, komentářů a bez formátování.
+7) Nikdy nepoužívej "sales", tabulka se jmenuje "sale".
 
 OTÁZKA: "{question}"
 """
+
     response = client.chat.completions.create(
         model="gpt-4.1-mini",
         messages=[{"role": "user", "content": prompt}],
@@ -44,9 +46,22 @@ OTÁZKA: "{question}"
 
     sql = response.choices[0].message.content.strip()
 
-    # Bezpečná sanitizace názvu tabulky
-    sql = sql.replace("sales", "sale").replace("Sales", "sale").replace("SALE", "sale")
-    sql = sql.replace("FROM sales", "FROM sale").replace("JOIN sales", "JOIN sale")
+    # 🛡️ Bezpečná sanitizace: jen tabulka + standalone price
+    #  → NE saháme na sale.price nebo sale.sale_price
+    replace_map = {
+        "JOIN sales": "JOIN sale",
+        "FROM sales": "FROM sale",
+        "join sales": "join sale",
+        "from sales": "from sale",
+        "`sales`": "`sale`",
+    }
+
+    for old, new in replace_map.items():
+        sql = sql.replace(old, new)
+
+    # ⚠️ Nahrazení " price" ale NE pokud už obsahuje sale_price
+    sql = sql.replace(" price", " sale_price").replace("(price", "(sale_price")
+
     return sql
 
 
@@ -64,7 +79,7 @@ Tvým úkolem je stručně vysvětlit data a doporučit konkrétní obchodní ak
   - Gin + tonic
   - Rum + čokoláda/káva
   - Whisky + sklenice/dárkové balení
-  - Champagne + firemní dárkové boxy
+  - Champagne + dárkové boxy
 • Sezónnost:
   - Zima: whisky, koňak
   - Léto: gin, koktejlové rumy
@@ -82,9 +97,11 @@ Tvým úkolem je stručně vysvětlit data a doporučit konkrétní obchodní ak
 📊 DATA: {result}
 ❓ OTÁZKA: "{question}"
 """
+
     response = client.chat.completions.create(
         model="gpt-4.1-mini",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.25,
     )
+
     return response.choices[0].message.content.strip()

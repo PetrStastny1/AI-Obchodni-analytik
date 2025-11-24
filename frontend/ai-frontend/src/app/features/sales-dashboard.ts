@@ -18,6 +18,35 @@ import {
   ApexGrid
 } from 'ng-apexcharts';
 
+type SaleItem = {
+  id: number;
+  date: string;
+  product: string;
+  quantity: number;
+  sale_price: number;
+};
+
+// 🎯 GraphQL dotazy vytáhneme ven
+const CHECK_EMPTY = gql`
+  query CheckEmpty {
+    sales {
+      id
+    }
+  }
+`;
+
+const GET_SALES = gql`
+  query GetSales {
+    sales {
+      id
+      date
+      product
+      quantity
+      sale_price
+    }
+  }
+`;
+
 export type ChartOptions = {
   series?: ApexAxisChartSeries;
   chart?: ApexChart;
@@ -45,63 +74,100 @@ export type ChartOptions = {
   styleUrls: ['./sales-dashboard.scss']
 })
 export class SalesDashboardComponent implements OnInit {
-  sales: any[] = [];
+  sales: SaleItem[] = [];
+
   totalSales = 0;
   orderCount = 0;
   avgBasket = 0;
 
+  hasData = false; // ⚡ určujeme, zda zobrazit dashboard
+
   salesSeries: ApexAxisChartSeries = [];
   productSeries: ApexAxisChartSeries = [];
+
   chartOptions: Partial<ChartOptions> = {};
   chartOptionsBar: Partial<ChartOptions> = {};
 
   constructor(private apollo: Apollo, private router: Router) {}
 
   ngOnInit(): void {
+    // 1) 👉 Nejdříve zjistíme, zda existují alespoň 1 prodej
     this.apollo
       .watchQuery({
-        query: gql`
-          query GetSales {
-            sales {
-              id
-              date
-              product
-              quantity
-              price
-            }
-          }
-        `
+        query: CHECK_EMPTY,
+        fetchPolicy: 'network-only',    // 🔥 nenačítej z cache!
+        pollInterval: 5000              // 🔄 kontroluj nové importy každých 5s
       })
       .valueChanges.subscribe(({ data }: any) => {
-        this.sales = data?.sales ?? [];
+        const exists = (data?.sales ?? []).length > 0;
+
+        if (!exists) {
+          this.hasData = false;
+          return;
+        }
+
+        // ▶ Pokud přibyly data → načti celý dashboard
+        if (!this.hasData) {
+          this.hasData = true;
+          this.loadFullSales();
+        }
+      });
+  }
+
+  // 2) 👉 Full dashboard refresh
+  private loadFullSales() {
+    this.apollo
+      .watchQuery({
+        query: GET_SALES,
+        fetchPolicy: 'network-only', // vždy čerstvě z backendu
+        pollInterval: 5000           // refresh chartů a KPI každých 5s
+      })
+      .valueChanges.subscribe(({ data }: any) => {
+        this.sales = (data?.sales ?? []).map((s: any) => ({
+          ...s,
+          sale_price: Number(s.sale_price)
+        }));
+
+        // 📊 KPI výpočty
         this.orderCount = this.sales.length;
         this.totalSales = this.sales.reduce(
-          (a: number, s: any) => a + s.quantity * s.price,
+          (a: number, s: SaleItem) => a + s.quantity * s.sale_price,
           0
         );
         this.avgBasket = this.orderCount ? this.totalSales / this.orderCount : 0;
+
+        // ⛑️ pokud mezitím někdo databázi vymazal → skryj dashboard
+        if (this.sales.length === 0) {
+          this.hasData = false;
+          return;
+        }
+
+        // 📈 Render grafů
         this.buildRevenueByDayChart();
         this.buildTopProductsChart();
       });
   }
 
+  // 🌙 / ☀️ Helpery
   isDarkMode(): boolean {
     return document.documentElement.classList.contains('dark-mode');
   }
-
   getTextColor(): string {
     return this.isDarkMode() ? '#FFFFFF' : '#000000';
   }
 
+  // 📈 Chart 1: Tržby podle dne
   buildRevenueByDayChart() {
     const map = new Map<string, number>();
     for (const s of this.sales) {
+      if (!s.date) continue;
       const date = new Date(s.date).toISOString().slice(0, 10);
-      map.set(date, (map.get(date) || 0) + s.quantity * s.price);
+      map.set(date, (map.get(date) || 0) + s.quantity * s.sale_price);
     }
 
     const labels = [...map.keys()].sort();
-    const values = labels.map(d => map.get(d) || 0);
+    const values = labels.map((d) => map.get(d) || 0);
+
     this.salesSeries = [{ name: 'Tržby', data: values }];
 
     this.chartOptions = {
@@ -110,14 +176,7 @@ export class SalesDashboardComponent implements OnInit {
         height: 300,
         toolbar: { show: false },
         animations: { enabled: true },
-        foreColor: this.getTextColor(),
-        events: {
-          dataPointSelection: (_e, _ctx, cfg) => {
-            const index = cfg.dataPointIndex;
-            const date = labels[index];
-            this.router.navigate(['/sales'], { queryParams: { date } });
-          }
-        }
+        foreColor: this.getTextColor()
       },
       xaxis: { categories: labels },
       dataLabels: { enabled: false },
@@ -126,18 +185,17 @@ export class SalesDashboardComponent implements OnInit {
     };
   }
 
+  // 📊 Chart 2: Top produkty
   buildTopProductsChart() {
     const map = new Map<string, number>();
     for (const s of this.sales) {
-      map.set(s.product, (map.get(s.product) || 0) + s.quantity * s.price);
+      map.set(s.product, (map.get(s.product) || 0) + s.quantity * s.sale_price);
     }
 
-    const entries = [...map.entries()]
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5);
+    const entries = [...map.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
+    const labels = entries.map((e) => e[0]);
+    const values = entries.map((e) => e[1]);
 
-    const labels = entries.map(e => e[0]);
-    const values = entries.map(e => e[1]);
     this.productSeries = [{ name: 'Tržby', data: values }];
 
     this.chartOptionsBar = {
@@ -146,14 +204,7 @@ export class SalesDashboardComponent implements OnInit {
         height: 300,
         toolbar: { show: false },
         animations: { enabled: true },
-        foreColor: this.getTextColor(),
-        events: {
-          dataPointSelection: (_e, _ctx, cfg) => {
-            const index = cfg.dataPointIndex;
-            const product = labels[index];
-            this.router.navigate(['/sales'], { queryParams: { product } });
-          }
-        }
+        foreColor: this.getTextColor()
       },
       xaxis: { categories: labels },
       dataLabels: { enabled: false },

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { NgIf, NgFor, DatePipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-import-csv',
@@ -19,11 +20,13 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ImportCsvComponent {
 
+  /** 📡 Event pro dashboard — po importu se má refreshnout */
+  static refreshDashboard = new EventEmitter<void>();
+
   selectedFile: File | null = null;
   fileName = '';
   message = '';
   loading = false;
-
   allSelected = false;
 
   imports: {
@@ -59,11 +62,15 @@ export class ImportCsvComponent {
           this.selectedFile = null;
           this.fileName = '';
           this.message = 'CSV úspěšně nahrán!';
-          this.loading = false;
+
+          // 🔄 Refresh importů + dashboardu
           this.loadImports();
+          ImportCsvComponent.refreshDashboard.emit();
+
+          this.loading = false;
         },
         error: () => {
-          this.message = 'Chyba při nahrávání CSV!';
+          this.message = '❌ Chyba při nahrávání CSV!';
           this.loading = false;
         }
       });
@@ -73,11 +80,11 @@ export class ImportCsvComponent {
   loadImports() {
     this.http.get<any[]>('http://localhost:3000/sales/imports')
       .subscribe(data => {
-        this.imports = data.map(i => ({
+        this.imports = (data ?? []).map(i => ({
           id: i.id,
           filename: i.filename,
-          records: i.records,
-          importedAt: i.imported_at || i.importedAt, // 🤝 podporuje obě varianty
+          records: i.records ?? 0,
+          importedAt: i.imported_at || i.importedAt,
           selected: false
         }));
         this.allSelected = false;
@@ -87,7 +94,7 @@ export class ImportCsvComponent {
   /** ✔️ Přepne checkbox v headeru */
   toggleSelectAll() {
     this.allSelected = !this.allSelected;
-    this.imports.forEach(i => i.selected = this.allSelected);
+    this.imports.forEach(i => (i.selected = this.allSelected));
   }
 
   /** 🔍 Zda má něco označené */
@@ -102,17 +109,19 @@ export class ImportCsvComponent {
 
     this.loading = true;
 
-    const requests = ids.map(id =>
-      this.http.delete(`http://localhost:3000/sales/imports/${id}`)
-    );
-
-    Promise.all(requests.map(r => r.toPromise()))
+    // 🔥 Promise.all bez toPromise()
+    Promise.all(ids.map(id =>
+      this.http.delete(`http://localhost:3000/sales/imports/${id}`).toPromise()
+    ))
       .then(() => {
-        this.message = 'Vybrané záznamy smazány';
+        this.message = '🗑️ Vybrané záznamy smazány';
+
+        // ♻ Refresh importů + dashboard
         this.loadImports();
+        ImportCsvComponent.refreshDashboard.emit();
       })
       .catch(() => {
-        this.message = 'Chyba při mazání!';
+        this.message = '❌ Chyba při mazání!';
       })
       .finally(() => {
         this.loading = false;

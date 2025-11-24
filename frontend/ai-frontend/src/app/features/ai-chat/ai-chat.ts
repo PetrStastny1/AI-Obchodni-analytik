@@ -1,8 +1,6 @@
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Apollo } from 'apollo-angular';
-import gql from 'graphql-tag';
 import {
   NgApexchartsModule,
   ApexAxisChartSeries,
@@ -11,6 +9,7 @@ import {
   ApexStroke,
   ApexTheme
 } from 'ng-apexcharts';
+import { AiChatService } from './services/ai-chat.service';
 
 @Component({
   selector: 'app-ai-chat',
@@ -22,49 +21,33 @@ import {
 export class AiChatComponent implements OnInit {
   @ViewChild('messagesContainer') private messagesContainer!: ElementRef;
 
-  /* ============ CHAT STATE ============ */
+  /* === CHAT STATE === */
   question = '';
   messages: any[] = [];
   typingText = '';
   loading = false;
 
-  /* ============ VOICE RECOGNITION ============ */
+  /* === SPEECH === */
   isRecording = false;
   countdownActive = false;
   countdownTimeoutId: any;
   recognition: any;
 
-  /* ============ MINI CHART ============ */
-  activeChart: {
-    series: ApexAxisChartSeries;
-    chart: ApexChart;
-    xaxis: ApexXAxis;
-    theme: ApexTheme;
-    colors: string[];
-    stroke: ApexStroke;
-  } | null = null;
+  /* === MINI CHART === */
+  activeChart:
+    | {
+        series: ApexAxisChartSeries;
+        chart: ApexChart;
+        xaxis: ApexXAxis;
+        theme: ApexTheme;
+        colors: string[];
+        stroke: ApexStroke;
+      }
+    | null = null;
 
-  /* ============ AI HINTS ============ */
-  tips = [
-    { label: 'Top produkty podle tržeb', q: 'Jaké jsou top produkty podle tržeb?' },
-    { label: 'Nejlepší den v prodejích', q: 'Který den měl největší tržby?' },
-    { label: 'Celkové tržby za měsíc', q: 'Jaké jsou celkové tržby za poslední měsíc?' },
-    { label: 'Počet prodaných kusů', q: 'Kolik kusů se prodalo celkem?' }
-  ];
+  constructor(private aiChat: AiChatService) {}
 
-  constructor(private apollo: Apollo) {}
-
-  /* =======================================
-     ▶️ QUICK ASK FROM TIPS
-     ======================================= */
-  quickAsk(q: string) {
-    this.question = q;
-    this.send();
-  }
-
-  /* =======================================
-     🎙️ SPEECH RECOGNITION INIT
-     ======================================= */
+  /* ========================= 🎙️ INIT VOICE ========================= */
   ngOnInit() {
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -74,7 +57,6 @@ export class AiChatComponent implements OnInit {
     this.recognition = new SpeechRecognition();
     this.recognition.lang = 'cs-CZ';
     this.recognition.interimResults = true;
-    this.recognition.continuous = false;
 
     this.recognition.onresult = (event: any) => {
       const transcript = Array.from(event.results)
@@ -92,9 +74,7 @@ export class AiChatComponent implements OnInit {
     };
   }
 
-  /* =======================================
-     🎙️ RECORDING + COUNTDOWN
-     ======================================= */
+  /* ========================= 🎙️ RECORD ========================= */
   toggleRecording() {
     if (!this.recognition) return;
     this.clearCountdown();
@@ -112,7 +92,6 @@ export class AiChatComponent implements OnInit {
   startCountdown() {
     this.clearCountdown();
     this.countdownActive = true;
-
     this.countdownTimeoutId = setTimeout(() => {
       this.countdownActive = false;
       if (this.question.trim()) {
@@ -128,42 +107,34 @@ export class AiChatComponent implements OnInit {
     this.countdownActive = false;
   }
 
-  /* =======================================
-     📜 SMOOTH SCROLL
-     ======================================= */
+  /* ========================= 🔄 UI HELPERS ========================= */
   smoothScroll() {
-    const container = this.messagesContainer?.nativeElement;
-    if (!container) return;
-    container.scrollTo({ top: container.scrollHeight, behavior: 'smooth' });
+    const el = this.messagesContainer?.nativeElement;
+    if (!el) return;
+    el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' });
   }
 
-  /* =======================================
-     ⌨️ TYPEWRITER EFFECT
-     ======================================= */
-  typeWriter(text: string, callback: () => void) {
+  typeWriter(text: string, cb: () => void) {
+    this.typingText = '';
     let i = 0;
     const speed = 12;
-
     const tick = () => {
       if (i < text.length) {
         this.typingText += text.charAt(i);
         this.smoothScroll();
         i++;
         setTimeout(tick, speed);
-      } else callback();
+      } else cb();
     };
-
     tick();
   }
 
-  /* =======================================
-     📩 SEND MESSAGE + PROCESS AI RESULT
-     ======================================= */
+  /* ========================= 📨 SEND ========================= */
   send() {
     if (!this.question.trim()) return;
 
-    this.clearCountdown();
     const q = this.question.trim();
+    this.clearCountdown();
 
     this.messages.push({ sender: 'user', text: q });
     this.question = '';
@@ -172,65 +143,45 @@ export class AiChatComponent implements OnInit {
     this.activeChart = null;
     this.smoothScroll();
 
-    this.apollo
-      .query({
-        query: gql`
-          query AskAI($q: String!) {
-            askAI(question: $q) {
-              sql
-              rawResultJson
-              summary
-              chart {
-                categories
-                values
-              }
-            }
-          }
-        `,
-        variables: { q }
-      })
-      .subscribe(res => {
-        const ai = (res as any).data.askAI;
+    this.aiChat.ask(q).subscribe(ai => {
+      /* === TABLE PARSE === */
+      let table = null;
+      try {
+        const rows = JSON.parse(ai.rawResultJson ?? '[]');
+        if (Array.isArray(rows) && rows.length > 0)
+          table = { columns: Object.keys(rows[0]), rows };
+      } catch {}
 
-        /* =================== TABLE PARSE =================== */
-        let table = null;
-        try {
-          const rows = JSON.parse(ai.rawResultJson);
-          if (Array.isArray(rows) && rows.length > 0)
-            table = { columns: Object.keys(rows[0]), rows };
-        } catch {}
+      const last = { sender: 'ai', text: '', table };
+      this.messages.push(last);
+      this.smoothScroll();
 
+      /* === CHART (DARK/LIGHT AUTO) === */
+      if (ai.chart && ai.chart.categories?.length > 0) {
+        const isDark = document.documentElement.classList.contains('dark-mode');
+        this.activeChart = {
+          series: [{ data: ai.chart.values }],
+          chart: { type: 'bar', height: 240, toolbar: { show: false } },
+          xaxis: { categories: ai.chart.categories },
+          theme: { mode: isDark ? 'dark' : 'light' },
+          colors: ['#6A89FF'],
+          stroke: { width: 3, curve: 'smooth' }
+        };
+      }
+
+      /* === SUMMARY (TYPEWRITER) === */
+      this.typeWriter(ai.summary, () => {
+        last.text = ai.summary;
         this.typingText = '';
-        this.messages.push({ sender: 'ai', text: '', table });
+        this.loading = false;
         this.smoothScroll();
 
-        /* =================== CHART GENERATION =================== */
-        if (ai.chart && ai.chart.categories.length > 0) {
-          this.activeChart = {
-            series: [{ data: ai.chart.values }],
-            chart: { type: 'bar', height: 260, toolbar: { show: false } },
-            xaxis: { categories: ai.chart.categories },
-            theme: { mode: 'light' },
-            colors: ['#6A89FF'],
-            stroke: { width: 3, curve: 'smooth' }
-          };
-        }
-
-        const last = this.messages[this.messages.length - 1];
-
-        /* =================== TYPEWRITER SUMMARY =================== */
-        this.typeWriter(ai.summary, () => {
-          last.text = this.typingText;
-          this.typingText = '';
-
-          if (q.toLowerCase().includes('sql')) {
-            this.messages.push({ sender: 'ai', text: ai.sql });
-            this.smoothScroll();
-          }
-
-          this.loading = false;
+        /* === EXTRA: show raw SQL if user asked === */
+        if (q.toLowerCase().includes('sql')) {
+          this.messages.push({ sender: 'ai', text: ai.sql });
           this.smoothScroll();
-        });
+        }
       });
+    });
   }
 }

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <title>AI Business Analytik – API dokumentace</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        :root { color-scheme: light dark; }
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top left, #eef2ff 0, #fdf2f8 40%, #f9fafb 100%);
+            color: #0f172a;
+        }
+
+        .page { max-width: 1120px; margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+
+        /* ---------- HEADER ---------- */
+        .header {
+            display: flex; align-items: center; justify-content: space-between;
+            gap: 1.5rem; margin-bottom: 1.75rem;
+        }
+        .logo-wrap { display: flex; align-items: center; gap: 0.9rem; }
+        .logo-mark {
+            width: 40px; height: 40px; border-radius: 1.3rem;
+            background: radial-gradient(circle at 20% 0, #22c55e 0, #22c55e 10%, #0ea5e9 55%, #6366f1 100%);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-weight: 700; font-size: 1.1rem;
+            box-shadow: 0 18px 40px rgba(79,70,229,0.5);
+        }
+        .logo-text-main { font-size: 1.25rem; font-weight: 650; letter-spacing: -0.03em; }
+        .logo-text-sub { font-size: 0.8rem; color: #6b7280; }
+
+        .header-right { display: flex; align-items: center; gap: 1rem; }
+        .btn {
+            border-radius: 999px; padding: 0.4rem 0.9rem; font-size: 0.8rem;
+            border: 1px solid rgba(148,163,184,0.7);
+            background: rgba(255,255,255,0.9);
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            color: #111827; text-decoration: none; cursor: pointer;
+        }
+        .btn svg { width: 14px; height: 14px; }
+
+        .qr-wrap {
+            width: 82px; height: 82px; border-radius: 1rem; padding: 0.25rem;
+            background: rgba(15,23,42,0.04); display: flex;
+            align-items: center; justify-content: center;
+        }
+        .qr-wrap img {
+            width: 70px; height: 70px; border-radius: 0.6rem;
+        }
+
+        h1 { font-size: 2.05rem; letter-spacing: -0.03em; margin: 0 0 0.5rem; }
+        .subtitle {
+            color: #4b5563; max-width: 640px;
+            font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;
+        }
+
+        /* ---------- GRID ---------- */
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.2fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: minmax(0, 1fr); }
+            .header { flex-direction: column; align-items: flex-start; }
+            .header-right { align-self: stretch; justify-content: space-between; }
+        }
+
+        /* ---------- CARD ---------- */
+        .card {
+            background: rgba(255,255,255,0.96);
+            border-radius: 1.25rem; padding: 1.5rem 1.4rem;
+            box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+            border: 1px solid rgba(148,163,184,0.35);
+            backdrop-filter: blur(10px);
+        }
+        .pill-title {
+            font-size: 0.78rem; text-transform: uppercase;
+            letter-spacing: 0.14em; color: #6b7280; margin-bottom: 0.55rem;
+        }
+        .endpoint { margin-bottom: 1rem; }
+        .method {
+            font-size: 0.78rem; font-weight: 600;
+            padding: 0.1rem 0.55rem; border-radius: 999px; margin-right: 0.4rem;
+        }
+        .method-get { background: rgba(16,185,129,0.12); color: #047857; }
+        .method-post { background: rgba(59,130,246,0.16); color: #1d4ed8; }
+        .path {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.86rem;
+        }
+
+        /* ---------- TEXT FORMATTING ---------- */
+        .endpoint-desc { font-size: 0.85rem; color: #4b5563; margin-top: 0.15rem; }
+        ul { font-size: 0.86rem; padding-left: 1.1rem; color: #374151; margin: 0.15rem 0 0.3rem; }
+        li { margin-bottom: 0.18rem; }
+        code {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 0.82rem;
+            background: rgba(15,23,42,0.04);
+            padding: 0.08rem 0.25rem; border-radius: 0.4rem;
+        }
+        pre {
+            background: #020617; color: #e5e7eb;
+            padding: 0.9rem 1rem; border-radius: 0.9rem;
+            font-size: 0.78rem; overflow-x: auto;
+            border: 1px solid rgba(15,23,42,0.9); margin-top: 0.4rem;
+        }
+
+        /* ---------- AI FORM ---------- */
+        .ai-form { display: flex; flex-direction: column; gap: 0.6rem; }
+        .ai-input {
+            width: 100%; border-radius: 0.85rem;
+            border: 1px solid rgba(148,163,184,0.9);
+            padding: 0.7rem 0.8rem; font-size: 0.9rem;
+            resize: vertical; min-height: 3rem; max-height: 120px;
+        }
+        .ai-run {
+            display: inline-flex; align-items: center; gap: 0.4rem;
+            align-self: flex-end; border-radius: 999px;
+            border: none; padding: 0.45rem 0.9rem;
+            background: linear-gradient(135deg, #4f46e5, #22c55e);
+            color: white; font-size: 0.85rem; font-weight: 500; cursor: pointer;
+            box-shadow: 0 14px 35px rgba(79,70,229,0.65);
+        }
+        .ai-run:disabled { opacity: 0.6; box-shadow: none; cursor: default; }
+
+        .ai-output-section {
+            margin-top: 0.9rem; display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 0.75rem;
+        }
+        @media (max-width: 640px) {
+            .ai-output-section { grid-template-columns: minmax(0, 1fr); }
+        }
+
+        .ai-block-title {
+            font-size: 0.78rem; text-transform: uppercase;
+            letter-spacing: 0.16em; color: #6b7280; margin-bottom: 0.3rem;
+        }
+        .box {
+            background: rgba(15,23,42,0.97); color: #e5e7eb;
+            border-radius: 0.85rem; padding: 0.7rem 0.8rem;
+            font-size: 0.8rem; min-height: 60px;
+            border: 1px solid rgba(15,23,42,0.9);
+            white-space: pre-wrap; word-break: break-word; overflow-x: auto;
+        }
+        .summary-box {
+            background: rgba(248,250,252,0.9); color: #111827;
+            border: 1px solid rgba(209,213,219,0.9);
+        }
+
+        .muted { font-size: 0.8rem; color: #6b7280; }
+
+    </style>
+</head>
+
+<body>
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo-wrap">
+            <div class="logo-mark">AI</div>
+            <div>
+                <div class="logo-text-main">AI Obchodní Analytik</div>
+                <div class="logo-text-sub">FastAPI AI služba pro BI dashboard</div>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <a class="btn" href="https://github.com/PetrStastny1/AI-Obchodni-analytik" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 16 16"><path fill="currentColor"
+                    d="M8 0C3.58 0 0 3.58 0 8..."/></svg>
+                <span>GitHub repo</span>
+            </a>
+            <div class="qr-wrap">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=http://localhost:8001/docs" />
+            </div>
+        </div>
+    </div>
+
+    <h1>API dokumentace</h1>
+    <p class="subtitle">
+        Tato služba poskytuje AI analytiku nad databází <code>sales</code>.
+        Přijímá dotazy v češtině, generuje SQL, provede dotaz v MySQL a vrací data i shrnutí.
+    </p>
+
+    <!-- GRID -->
+    <div class="grid">
+
+        <!-- LEFT CARD -->
+        <div class="card">
+            <div class="pill-title">Endpointy</div>
+
+            <div class="endpoint">
+                <span class="method method-get">GET</span>
+                <span class="path">/health</span>
+                <div class="endpoint-desc">Health-check služby.</div>
+            </div>
+
+            <div class="endpoint">
+                <span class="method method-post">POST</span>
+                <span class="path">/analyze</span>
+                <div class="endpoint-desc">
+                    Hlavní AI endpoint. Dotaz v češtině → SQL → výsledek → shrnutí.
+                </div>
+            </div>
+
+            <div class="endpoint">
+                <span class="method method-post">POST</span>
+                <span class="path">/forecast</span>
+                <div class="endpoint-desc">
+                    📈 AI predikce trendů a množství do budoucna (např. do konce roku).
+                </div>
+            </div>
+
+            <div class="pill-title">Request body – /analyze & /forecast</div>
+            <ul>
+                <li><code>question</code> – dotaz v přirozeném jazyce</li>
+                <li><code>limit</code> – volitelné, max. řádky (default 100)</li>
+            </ul>
+
+            <div class="pill-title" style="margin-top:1rem;">Response body</div>
+            <ul>
+                <li><code>sql</code> – vygenerovaný SQL dotaz</li>
+                <li><code>result</code> – výsledná data</li>
+                <li><code>summary</code> – shrnutí v češtině</li>
+            </ul>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="card">
+            <div class="pill-title">Interaktivní AI konzole</div>
+
+            <form class="ai-form" onsubmit="runAnalyze(event)">
+                <textarea id="question-input" class="ai-input" placeholder="Např. 'Predikuj prodeje Macallan Sherry Oak do konce roku'"></textarea>
+                <button id="run-btn" type="submit" class="ai-run">Spustit analýzu</button>
+            </form>
+
+            <div class="muted" style="margin-top:0.3rem;">
+                Backend vygeneruje SQL, provede ho nad MySQL a vrátí výsledek včetně shrnutí.
+            </div>
+
+            <div class="ai-output-section">
+                <div>
+                    <div class="ai-block-title">SQL dotaz</div>
+                    <div id="sql-block" class="box"></div>
+                </div>
+                <div>
+                    <div class="ai-block-title">Výsledek (JSON)</div>
+                    <div id="result-block" class="box"></div>
+                </div>
+            </div>
+
+            <div style="margin-top:1rem;">
+                <div class="ai-block-title">Shrnutí</div>
+                <div id="summary-block" class="box summary-box"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    async function runAnalyze(event) {
+        event.preventDefault();
+
+        const input = document.getElementById('question-input');
+        const btn = document.getElementById('run-btn');
+        const sqlBlock = document.getElementById('sql-block');
+        const resultBlock = document.getElementById('result-block');
+        const summaryBlock = document.getElementById('summary-block');
+
+        const question = input.value.trim();
+        if (!question) return;
+
+        btn.disabled = true;
+        btn.innerText = 'Probíhá analýza...';
+        sqlBlock.textContent = ''; resultBlock.textContent = ''; summaryBlock.textContent = '';
+
+        try {
+            const res = await fetch('/analyze', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ question })
+            });
+
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.detail || 'Neznámá chyba');
+
+            sqlBlock.textContent = data.sql || '';
+            resultBlock.textContent = JSON.stringify(data.result || [], null, 2);
+            summaryBlock.textContent = data.summary || '';
+
+        } catch (e) {
+            summaryBlock.textContent = 'Chyba: ' + e.message;
+        } finally {
+            btn.disabled = false;
+            btn.innerText = 'Spustit analýzu';
+        }
+    }
+</script>
+
+</body>
+</html>
