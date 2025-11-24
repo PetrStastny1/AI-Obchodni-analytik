@@ -18,6 +18,8 @@ import {
   ApexGrid
 } from 'ng-apexcharts';
 
+import { ImportCsvComponent } from './import-csv/import-csv';
+
 type SaleItem = {
   id: number;
   date: string;
@@ -26,7 +28,18 @@ type SaleItem = {
   sale_price: number;
 };
 
-// 🎯 GraphQL dotazy vytáhneme ven
+export type ChartOptions = {
+  series?: ApexAxisChartSeries;
+  chart?: ApexChart;
+  xaxis?: ApexXAxis;
+  dataLabels?: ApexDataLabels;
+  stroke?: ApexStroke;
+  plotOptions?: ApexPlotOptions;
+  title?: ApexTitleSubtitle;
+  grid?: ApexGrid;
+};
+
+// 🟦 Dotazy
 const CHECK_EMPTY = gql`
   query CheckEmpty {
     sales {
@@ -46,17 +59,6 @@ const GET_SALES = gql`
     }
   }
 `;
-
-export type ChartOptions = {
-  series?: ApexAxisChartSeries;
-  chart?: ApexChart;
-  xaxis?: ApexXAxis;
-  dataLabels?: ApexDataLabels;
-  stroke?: ApexStroke;
-  plotOptions?: ApexPlotOptions;
-  title?: ApexTitleSubtitle;
-  grid?: ApexGrid;
-};
 
 @Component({
   selector: 'app-sales-dashboard',
@@ -80,7 +82,7 @@ export class SalesDashboardComponent implements OnInit {
   orderCount = 0;
   avgBasket = 0;
 
-  hasData = false; // ⚡ určujeme, zda zobrazit dashboard
+  hasData = false;
 
   salesSeries: ApexAxisChartSeries = [];
   productSeries: ApexAxisChartSeries = [];
@@ -91,36 +93,30 @@ export class SalesDashboardComponent implements OnInit {
   constructor(private apollo: Apollo, private router: Router) {}
 
   ngOnInit(): void {
-    // 1) 👉 Nejdříve zjistíme, zda existují alespoň 1 prodej
+    // 1) 👉 zkontrolujeme, jestli existují data
     this.apollo
       .watchQuery({
         query: CHECK_EMPTY,
-        fetchPolicy: 'network-only',    // 🔥 nenačítej z cache!
-        pollInterval: 5000              // 🔄 kontroluj nové importy každých 5s
+        fetchPolicy: 'network-only'
       })
       .valueChanges.subscribe(({ data }: any) => {
         const exists = (data?.sales ?? []).length > 0;
-
-        if (!exists) {
-          this.hasData = false;
-          return;
-        }
-
-        // ▶ Pokud přibyly data → načti celý dashboard
-        if (!this.hasData) {
-          this.hasData = true;
-          this.loadFullSales();
-        }
+        this.hasData = exists;
+        if (exists) this.loadFullSales();
       });
+
+    // 2) 🟢 posloucháme refresh po uploadu CSV
+    ImportCsvComponent.refreshDashboard.subscribe(() => {
+      this.loadFullSales();
+    });
   }
 
-  // 2) 👉 Full dashboard refresh
+  // 🔄 Načtení dashboardu
   private loadFullSales() {
     this.apollo
       .watchQuery({
         query: GET_SALES,
-        fetchPolicy: 'network-only', // vždy čerstvě z backendu
-        pollInterval: 5000           // refresh chartů a KPI každých 5s
+        fetchPolicy: 'network-only' // ⚡ vždy čerstvá data
       })
       .valueChanges.subscribe(({ data }: any) => {
         this.sales = (data?.sales ?? []).map((s: any) => ({
@@ -128,7 +124,7 @@ export class SalesDashboardComponent implements OnInit {
           sale_price: Number(s.sale_price)
         }));
 
-        // 📊 KPI výpočty
+        // 💰 KPI
         this.orderCount = this.sales.length;
         this.totalSales = this.sales.reduce(
           (a: number, s: SaleItem) => a + s.quantity * s.sale_price,
@@ -136,19 +132,19 @@ export class SalesDashboardComponent implements OnInit {
         );
         this.avgBasket = this.orderCount ? this.totalSales / this.orderCount : 0;
 
-        // ⛑️ pokud mezitím někdo databázi vymazal → skryj dashboard
+        // ❌ Pokud mezitím někdo data smazal
         if (this.sales.length === 0) {
           this.hasData = false;
           return;
         }
 
-        // 📈 Render grafů
+        // 📈 Grafy
         this.buildRevenueByDayChart();
         this.buildTopProductsChart();
       });
   }
 
-  // 🌙 / ☀️ Helpery
+  // ☀️ / 🌙 Helpery
   isDarkMode(): boolean {
     return document.documentElement.classList.contains('dark-mode');
   }
@@ -156,7 +152,7 @@ export class SalesDashboardComponent implements OnInit {
     return this.isDarkMode() ? '#FFFFFF' : '#000000';
   }
 
-  // 📈 Chart 1: Tržby podle dne
+  // 📈 Graf 1: Tržby podle dne
   buildRevenueByDayChart() {
     const map = new Map<string, number>();
     for (const s of this.sales) {
@@ -166,7 +162,7 @@ export class SalesDashboardComponent implements OnInit {
     }
 
     const labels = [...map.keys()].sort();
-    const values = labels.map((d) => map.get(d) || 0);
+    const values = labels.map(d => map.get(d) || 0);
 
     this.salesSeries = [{ name: 'Tržby', data: values }];
 
@@ -185,7 +181,7 @@ export class SalesDashboardComponent implements OnInit {
     };
   }
 
-  // 📊 Chart 2: Top produkty
+  // 📊 Graf 2: Top produkty
   buildTopProductsChart() {
     const map = new Map<string, number>();
     for (const s of this.sales) {
@@ -193,8 +189,8 @@ export class SalesDashboardComponent implements OnInit {
     }
 
     const entries = [...map.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5);
-    const labels = entries.map((e) => e[0]);
-    const values = entries.map((e) => e[1]);
+    const labels = entries.map(e => e[0]);
+    const values = entries.map(e => e[1]);
 
     this.productSeries = [{ name: 'Tržby', data: values }];
 

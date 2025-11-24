@@ -30,14 +30,19 @@
     </div>
   </div>
 
-  <!-- === FIXED INPUT BAR (bottom inside cell) === -->
+  <!-- === FIXED INPUT BAR === -->
   <div class="input-bar">
     <div class="input-wrap">
+
+      <!-- 💬 NOVÝ CHAT -->
+      <button class="glass-circle new-chat" (click)="newChat()" title="Nový chat">💬</button>
+
       <input [(ngModel)]="question" (keyup.enter)="send()" placeholder="Zeptej se AI na tržby, produkty, trendy..." />
 
       <button class="glass-circle mic" [class.recording]="isRecording" (click)="toggleRecording()">🎤</button>
 
       <button class="glass-circle send" (click)="send()">➤</button>
+
     </div>
   </div>
 

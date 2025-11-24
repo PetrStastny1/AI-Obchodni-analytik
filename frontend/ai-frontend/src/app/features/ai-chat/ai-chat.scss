@@ -1,13 +1,12 @@
 /* === FULLSCREEN CELL === */
 .ai-full-wrapper {
-  height: calc(100vh - 120px); /* celá výška jako dashboard panel */
+  height: calc(100vh - 120px);
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   font-family: Inter, system-ui, sans-serif;
 
-  /* glass cell background */
   background: rgba(255,255,255,0.32);
   border: 1px solid rgba(200,220,255,0.55);
   border-radius: 22px;
@@ -19,9 +18,10 @@
 .messages {
   flex: 1;
   overflow-y: auto;
-  padding: 1.3rem 1.6rem 6.5rem; /* rezerva pro input bar */
+  padding: 1.3rem 1.6rem 7.6rem;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 /* ===== BUBBLES ===== */
@@ -36,49 +36,49 @@
 /* USER */
 .bubble.user {
   margin-left: auto;
-  background: rgba(120,155,255,0.28);
-  border: 1px solid rgba(160,185,255,0.55);
+  background: rgba(110,145,255,0.32);
+  border: 1px solid rgba(150,175,255,0.55);
   color: #0A1228;
-  box-shadow: 0 6px 18px rgba(80,120,255,0.25);
+  box-shadow: 0 6px 18px rgba(80,120,255,0.22);
 }
 
 /* AI */
 .bubble.ai {
-  background: rgba(255,255,255,0.52);
-  border: 1px solid rgba(210,220,255,0.65);
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(200,210,245,0.65);
   color: #0A1228;
   box-shadow: 0 6px 18px rgba(20,30,60,0.10);
 }
 
-/* ===== INPUT BAR (always bottom) ===== */
+/* ===== INPUT BAR (fixed bottom) ===== */
 .input-bar {
   position: absolute;
   bottom: 18px;
-  left: 0;
-  right: 0;
+  left: 0; right: 0;
   display: flex;
   justify-content: center;
-  pointer-events: none; /* fix pro klikání */
+  pointer-events: none;
 }
 
 .input-bar .input-wrap {
   pointer-events: all;
   display: flex;
   align-items: center;
-  width: min(600px, 90%);
-  padding: .5rem .75rem;
+  width: min(680px, 92%);
+  padding: .55rem .8rem;
   border-radius: 42px;
-  background: rgba(255,255,255,0.5);
+
+  background: rgba(255,255,255,0.52);
   border: 1px solid rgba(200,220,255,0.65);
   backdrop-filter: blur(22px) saturate(165%);
-  box-shadow: 0 10px 38px rgba(100,140,255,0.28);
-  gap: .65rem;
+  box-shadow: 0 10px 38px rgba(100,140,255,0.25);
+  gap: .55rem;
 }
 
-/* Input */
+/* === INPUT === */
 .input-wrap input {
   flex: 1;
-  height: 48px;
+  height: 46px;
   border-radius: 32px;
   border: 1px solid rgba(160,180,235,0.45);
   background: rgba(255,255,255,0.85);
@@ -91,7 +91,7 @@
   color: rgba(30,41,59,0.45);
 }
 
-/* ===== BUTTONS ===== */
+/* ===== GLASS ICON BUTTONS ===== */
 .glass-circle {
   width: 46px;
   height: 46px;
@@ -101,32 +101,54 @@
   justify-content: center;
   cursor: pointer;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   backdrop-filter: blur(18px);
   transition: .22s ease;
 }
 
-/* Mic */
-.glass-circle.mic {
-  background: rgba(255,255,255,0.55);
-  border: 1px solid rgba(160,180,225,0.65);
+/* 💬 NEW CHAT (lightest pastel) */
+.glass-circle.new-chat {
+  background: rgba(200,220,255,0.55);
+  border: 1px solid rgba(170,190,255,0.65);
+  color: #0A1228;
+  box-shadow: 0 6px 22px rgba(180,210,255,0.45);
 }
-.glass-circle.mic.recording {
-  background: rgba(255,80,80,0.55);
-  border-color: rgba(255,60,60,0.85);
+.glass-circle.new-chat:hover {
+  transform: scale(1.08);
+  background: rgba(210,230,255,0.65);
 }
 
-/* Send */
+/* 🎤 MIC — stejný styl jako NEW CHAT */
+.glass-circle.mic {
+  background: rgba(200,220,255,0.55);
+  border: 1px solid rgba(170,190,255,0.65);
+  color: #0A1228;
+  box-shadow: 0 6px 22px rgba(180,210,255,0.45);
+}
+
+.glass-circle.mic:hover:not(.recording) {
+  transform: scale(1.08);
+  background: rgba(210,230,255,0.65);
+}
+
+/* Mic recording (červený) */
+.glass-circle.mic.recording {
+  background: rgba(255,80,80,0.58);
+  border-color: rgba(255,60,60,0.85);
+  color: white;
+  box-shadow: 0 6px 22px rgba(255,80,80,0.45);
+}
+/* ➤ SEND (strong action) */
 .glass-circle.send {
   background: linear-gradient(145deg, #4F8BFF, #76A2FF);
   color: #fff;
   box-shadow: 0 6px 22px rgba(80,120,255,0.45);
 }
 .glass-circle.send:hover {
-  transform: scale(1.08);
+  transform: scale(1.12);
 }
 
-/* Typing dots */
+/* ===== TYPING DOTS ===== */
 .typing-dots { display: flex; gap: 4px; }
 .typing-dots .dot {
   width: 8px; height: 8px; border-radius: 50%;
@@ -136,3 +158,11 @@
 .typing-dots .dot:nth-child(2) { animation-delay: .2s }
 .typing-dots .dot:nth-child(3) { animation-delay: .4s }
 @keyframes blink { 0%,100%{opacity:.2} 50%{opacity:1} }
+
+/* ========================= 📱 RESPONSIVE ========================= */
+@media (max-width: 600px) {
+  .bubble { max-width: 88%; }
+  .input-wrap { width: 96%; }
+  .glass-circle { width: 42px; height: 42px; font-size: 1rem; }
+  .input-wrap input { height: 42px; font-size: .9rem; }
+}

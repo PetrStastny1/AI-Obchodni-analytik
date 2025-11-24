@@ -47,8 +47,18 @@ export class AiChatComponent implements OnInit {
 
   constructor(private aiChat: AiChatService) {}
 
-  /* ========================= 🎙️ INIT VOICE ========================= */
+  /* ========================= 📌 LOAD CHAT ========================= */
   ngOnInit() {
+    // obnovíme konverzaci
+    const saved = localStorage.getItem('ai-chat-history');
+    if (saved) {
+      try {
+        this.messages = JSON.parse(saved);
+        setTimeout(() => this.smoothScroll(), 0);
+      } catch {}
+    }
+
+    /* === INIT SPEECH === */
     const SpeechRecognition =
       (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
 
@@ -72,6 +82,17 @@ export class AiChatComponent implements OnInit {
       this.isRecording = false;
       if (this.typingText.trim()) this.startCountdown();
     };
+  }
+
+  /* ========================= 🆕 NEW CHAT ========================= */
+  newChat() {
+    this.messages = [];
+    this.activeChart = null;
+    this.typingText = '';
+    this.question = '';
+    this.clearCountdown();
+    localStorage.removeItem('ai-chat-history');
+    this.smoothScroll();
   }
 
   /* ========================= 🎙️ RECORD ========================= */
@@ -114,6 +135,10 @@ export class AiChatComponent implements OnInit {
     el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' });
   }
 
+  saveHistory() {
+    localStorage.setItem('ai-chat-history', JSON.stringify(this.messages));
+  }
+
   typeWriter(text: string, cb: () => void) {
     this.typingText = '';
     let i = 0;
@@ -137,6 +162,8 @@ export class AiChatComponent implements OnInit {
     this.clearCountdown();
 
     this.messages.push({ sender: 'user', text: q });
+    this.saveHistory();
+
     this.question = '';
     this.typingText = '';
     this.loading = true;
@@ -154,6 +181,7 @@ export class AiChatComponent implements OnInit {
 
       const last = { sender: 'ai', text: '', table };
       this.messages.push(last);
+      this.saveHistory();
       this.smoothScroll();
 
       /* === CHART (DARK/LIGHT AUTO) === */
@@ -174,11 +202,13 @@ export class AiChatComponent implements OnInit {
         last.text = ai.summary;
         this.typingText = '';
         this.loading = false;
+        this.saveHistory();
         this.smoothScroll();
 
         /* === EXTRA: show raw SQL if user asked === */
         if (q.toLowerCase().includes('sql')) {
           this.messages.push({ sender: 'ai', text: ai.sql });
+          this.saveHistory();
           this.smoothScroll();
         }
       });
